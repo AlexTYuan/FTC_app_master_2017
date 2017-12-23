@@ -24,7 +24,7 @@ public final class R {
         public static final int backgroundMediumMedium = 0x7f010006;
         public static final int backgroundVeryDark = 0x7f010007;
         public static final int backgroundVeryVeryDark = 0x7f010008;
-        public static final int colors = 0x7f010018;
+        public static final int colors = 0x7f01001a;
         public static final int feedbackBackground = 0x7f010009;
         public static final int feedbackBorder = 0x7f01000a;
         public static final int feedbackShape = 0x7f01000b;
@@ -131,51 +131,51 @@ public final class R {
         public static final int icon_robotcontroller = 0x7f020005;
     }
     public static final class id {
-        public static final int airplaneMode = 0x7f0c002e;
-        public static final int appsInstalled = 0x7f0c0039;
-        public static final int appsStatus = 0x7f0c003a;
-        public static final int batteryLevel = 0x7f0c002c;
-        public static final int bluetoothEnabled = 0x7f0c0030;
-        public static final int colorSwatch = 0x7f0c006a;
-        public static final int disconnect_from_wifidirect = 0x7f0c00c2;
-        public static final int entire_screen = 0x7f0c000e;
-        public static final int feedback = 0x7f0c0070;
-        public static final int feedbackOKButton = 0x7f0c0073;
-        public static final int feedbackText0 = 0x7f0c0071;
-        public static final int feedbackText1 = 0x7f0c0072;
-        public static final int isCCInstalled = 0x7f0c0043;
-        public static final int isDSInstalled = 0x7f0c0040;
-        public static final int isRCInstalled = 0x7f0c003d;
-        public static final int labelManufacturer = 0x7f0c0025;
-        public static final int labelModel = 0x7f0c0027;
-        public static final int loadingIndicator = 0x7f0c009d;
-        public static final int loadingIndicatorOverlay = 0x7f0c009c;
-        public static final int menu_buttons = 0x7f0c0012;
-        public static final int osVersion = 0x7f0c002a;
-        public static final int robotIcon = 0x7f0c0010;
-        public static final int textDeviceName = 0x7f0c0011;
-        public static final int textView = 0x7f0c0035;
-        public static final int textView10 = 0x7f0c002d;
-        public static final int textView11 = 0x7f0c0033;
-        public static final int textView12 = 0x7f0c0029;
-        public static final int textView13 = 0x7f0c002f;
-        public static final int textView3 = 0x7f0c003b;
-        public static final int textView4 = 0x7f0c003e;
-        public static final int textView5 = 0x7f0c0041;
-        public static final int textView6 = 0x7f0c0037;
-        public static final int textView7 = 0x7f0c0031;
-        public static final int textView8 = 0x7f0c002b;
-        public static final int textView9 = 0x7f0c0044;
-        public static final int top_bar = 0x7f0c000f;
-        public static final int txtIsCCInstalled = 0x7f0c0042;
-        public static final int txtIsDSInstalled = 0x7f0c003f;
-        public static final int txtIsRCInstalled = 0x7f0c003c;
-        public static final int txtManufacturer = 0x7f0c0026;
-        public static final int txtModel = 0x7f0c0028;
-        public static final int widiConnected = 0x7f0c0038;
-        public static final int widiName = 0x7f0c0036;
-        public static final int wifiConnected = 0x7f0c0034;
-        public static final int wifiEnabled = 0x7f0c0032;
+        public static final int airplaneMode = 0x7f0c0031;
+        public static final int appsInstalled = 0x7f0c003c;
+        public static final int appsStatus = 0x7f0c003d;
+        public static final int batteryLevel = 0x7f0c002f;
+        public static final int bluetoothEnabled = 0x7f0c0033;
+        public static final int colorSwatch = 0x7f0c006d;
+        public static final int disconnect_from_wifidirect = 0x7f0c00c5;
+        public static final int entire_screen = 0x7f0c0011;
+        public static final int feedback = 0x7f0c0073;
+        public static final int feedbackOKButton = 0x7f0c0076;
+        public static final int feedbackText0 = 0x7f0c0074;
+        public static final int feedbackText1 = 0x7f0c0075;
+        public static final int isCCInstalled = 0x7f0c0046;
+        public static final int isDSInstalled = 0x7f0c0043;
+        public static final int isRCInstalled = 0x7f0c0040;
+        public static final int labelManufacturer = 0x7f0c0028;
+        public static final int labelModel = 0x7f0c002a;
+        public static final int loadingIndicator = 0x7f0c00a0;
+        public static final int loadingIndicatorOverlay = 0x7f0c009f;
+        public static final int menu_buttons = 0x7f0c0015;
+        public static final int osVersion = 0x7f0c002d;
+        public static final int robotIcon = 0x7f0c0013;
+        public static final int textDeviceName = 0x7f0c0014;
+        public static final int textView = 0x7f0c0038;
+        public static final int textView10 = 0x7f0c0030;
+        public static final int textView11 = 0x7f0c0036;
+        public static final int textView12 = 0x7f0c002c;
+        public static final int textView13 = 0x7f0c0032;
+        public static final int textView3 = 0x7f0c003e;
+        public static final int textView4 = 0x7f0c0041;
+        public static final int textView5 = 0x7f0c0044;
+        public static final int textView6 = 0x7f0c003a;
+        public static final int textView7 = 0x7f0c0034;
+        public static final int textView8 = 0x7f0c002e;
+        public static final int textView9 = 0x7f0c0047;
+        public static final int top_bar = 0x7f0c0012;
+        public static final int txtIsCCInstalled = 0x7f0c0045;
+        public static final int txtIsDSInstalled = 0x7f0c0042;
+        public static final int txtIsRCInstalled = 0x7f0c003f;
+        public static final int txtManufacturer = 0x7f0c0029;
+        public static final int txtModel = 0x7f0c002b;
+        public static final int widiConnected = 0x7f0c003b;
+        public static final int widiName = 0x7f0c0039;
+        public static final int wifiConnected = 0x7f0c0037;
+        public static final int wifiEnabled = 0x7f0c0035;
     }
     public static final class layout {
         public static final int activity_inspection = 0x7f03000b;
@@ -439,7 +439,7 @@ public final class R {
         public static final int OpModeDialogTextAppearance = 0x7f070014;
     }
     public static final class styleable {
-        public static final int[] ColorListPreference = { 0x7f010018 };
+        public static final int[] ColorListPreference = { 0x7f01001a };
         public static final int ColorListPreference_colors = 0;
     }
 }

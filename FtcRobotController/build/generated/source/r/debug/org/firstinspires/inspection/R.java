@@ -24,7 +24,7 @@ public final class R {
         public static int backgroundMediumMedium = 0x7f010006;
         public static int backgroundVeryDark = 0x7f010007;
         public static int backgroundVeryVeryDark = 0x7f010008;
-        public static int colors = 0x7f010018;
+        public static int colors = 0x7f01001a;
         public static int feedbackBackground = 0x7f010009;
         public static int feedbackBorder = 0x7f01000a;
         public static int feedbackShape = 0x7f01000b;
@@ -131,51 +131,51 @@ public final class R {
         public static int icon_robotcontroller = 0x7f020005;
     }
     public static final class id {
-        public static int airplaneMode = 0x7f0c002e;
-        public static int appsInstalled = 0x7f0c0039;
-        public static int appsStatus = 0x7f0c003a;
-        public static int batteryLevel = 0x7f0c002c;
-        public static int bluetoothEnabled = 0x7f0c0030;
-        public static int colorSwatch = 0x7f0c006a;
-        public static int disconnect_from_wifidirect = 0x7f0c00c2;
-        public static int entire_screen = 0x7f0c000e;
-        public static int feedback = 0x7f0c0070;
-        public static int feedbackOKButton = 0x7f0c0073;
-        public static int feedbackText0 = 0x7f0c0071;
-        public static int feedbackText1 = 0x7f0c0072;
-        public static int isCCInstalled = 0x7f0c0043;
-        public static int isDSInstalled = 0x7f0c0040;
-        public static int isRCInstalled = 0x7f0c003d;
-        public static int labelManufacturer = 0x7f0c0025;
-        public static int labelModel = 0x7f0c0027;
-        public static int loadingIndicator = 0x7f0c009d;
-        public static int loadingIndicatorOverlay = 0x7f0c009c;
-        public static int menu_buttons = 0x7f0c0012;
-        public static int osVersion = 0x7f0c002a;
-        public static int robotIcon = 0x7f0c0010;
-        public static int textDeviceName = 0x7f0c0011;
-        public static int textView = 0x7f0c0035;
-        public static int textView10 = 0x7f0c002d;
-        public static int textView11 = 0x7f0c0033;
-        public static int textView12 = 0x7f0c0029;
-        public static int textView13 = 0x7f0c002f;
-        public static int textView3 = 0x7f0c003b;
-        public static int textView4 = 0x7f0c003e;
-        public static int textView5 = 0x7f0c0041;
-        public static int textView6 = 0x7f0c0037;
-        public static int textView7 = 0x7f0c0031;
-        public static int textView8 = 0x7f0c002b;
-        public static int textView9 = 0x7f0c0044;
-        public static int top_bar = 0x7f0c000f;
-        public static int txtIsCCInstalled = 0x7f0c0042;
-        public static int txtIsDSInstalled = 0x7f0c003f;
-        public static int txtIsRCInstalled = 0x7f0c003c;
-        public static int txtManufacturer = 0x7f0c0026;
-        public static int txtModel = 0x7f0c0028;
-        public static int widiConnected = 0x7f0c0038;
-        public static int widiName = 0x7f0c0036;
-        public static int wifiConnected = 0x7f0c0034;
-        public static int wifiEnabled = 0x7f0c0032;
+        public static int airplaneMode = 0x7f0c0031;
+        public static int appsInstalled = 0x7f0c003c;
+        public static int appsStatus = 0x7f0c003d;
+        public static int batteryLevel = 0x7f0c002f;
+        public static int bluetoothEnabled = 0x7f0c0033;
+        public static int colorSwatch = 0x7f0c006d;
+        public static int disconnect_from_wifidirect = 0x7f0c00c5;
+        public static int entire_screen = 0x7f0c0011;
+        public static int feedback = 0x7f0c0073;
+        public static int feedbackOKButton = 0x7f0c0076;
+        public static int feedbackText0 = 0x7f0c0074;
+        public static int feedbackText1 = 0x7f0c0075;
+        public static int isCCInstalled = 0x7f0c0046;
+        public static int isDSInstalled = 0x7f0c0043;
+        public static int isRCInstalled = 0x7f0c0040;
+        public static int labelManufacturer = 0x7f0c0028;
+        public static int labelModel = 0x7f0c002a;
+        public static int loadingIndicator = 0x7f0c00a0;
+        public static int loadingIndicatorOverlay = 0x7f0c009f;
+        public static int menu_buttons = 0x7f0c0015;
+        public static int osVersion = 0x7f0c002d;
+        public static int robotIcon = 0x7f0c0013;
+        public static int textDeviceName = 0x7f0c0014;
+        public static int textView = 0x7f0c0038;
+        public static int textView10 = 0x7f0c0030;
+        public static int textView11 = 0x7f0c0036;
+        public static int textView12 = 0x7f0c002c;
+        public static int textView13 = 0x7f0c0032;
+        public static int textView3 = 0x7f0c003e;
+        public static int textView4 = 0x7f0c0041;
+        public static int textView5 = 0x7f0c0044;
+        public static int textView6 = 0x7f0c003a;
+        public static int textView7 = 0x7f0c0034;
+        public static int textView8 = 0x7f0c002e;
+        public static int textView9 = 0x7f0c0047;
+        public static int top_bar = 0x7f0c0012;
+        public static int txtIsCCInstalled = 0x7f0c0045;
+        public static int txtIsDSInstalled = 0x7f0c0042;
+        public static int txtIsRCInstalled = 0x7f0c003f;
+        public static int txtManufacturer = 0x7f0c0029;
+        public static int txtModel = 0x7f0c002b;
+        public static int widiConnected = 0x7f0c003b;
+        public static int widiName = 0x7f0c0039;
+        public static int wifiConnected = 0x7f0c0037;
+        public static int wifiEnabled = 0x7f0c0035;
     }
     public static final class layout {
         public static int activity_inspection = 0x7f03000b;
@@ -439,7 +439,7 @@ public final class R {
         public static int OpModeDialogTextAppearance = 0x7f070014;
     }
     public static final class styleable {
-        public static int[] ColorListPreference = { 0x7f010018 };
+        public static int[] ColorListPreference = { 0x7f01001a };
         public static int ColorListPreference_colors = 0;
     }
 }

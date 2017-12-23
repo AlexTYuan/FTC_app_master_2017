@@ -24,7 +24,7 @@ public final class R {
         public static final int backgroundMediumMedium = 0x7f010006;
         public static final int backgroundVeryDark = 0x7f010007;
         public static final int backgroundVeryVeryDark = 0x7f010008;
-        public static final int colors = 0x7f010018;
+        public static final int colors = 0x7f01001a;
         public static final int feedbackBackground = 0x7f010009;
         public static final int feedbackBorder = 0x7f01000a;
         public static final int feedbackShape = 0x7f01000b;
@@ -125,13 +125,13 @@ public final class R {
         public static final int feedback_shape_orange = 0x7f020002;
     }
     public static final class id {
-        public static final int colorSwatch = 0x7f0c006a;
-        public static final int feedback = 0x7f0c0070;
-        public static final int feedbackOKButton = 0x7f0c0073;
-        public static final int feedbackText0 = 0x7f0c0071;
-        public static final int feedbackText1 = 0x7f0c0072;
-        public static final int loadingIndicator = 0x7f0c009d;
-        public static final int loadingIndicatorOverlay = 0x7f0c009c;
+        public static final int colorSwatch = 0x7f0c006d;
+        public static final int feedback = 0x7f0c0073;
+        public static final int feedbackOKButton = 0x7f0c0076;
+        public static final int feedbackText0 = 0x7f0c0074;
+        public static final int feedbackText1 = 0x7f0c0075;
+        public static final int loadingIndicator = 0x7f0c00a0;
+        public static final int loadingIndicatorOverlay = 0x7f0c009f;
     }
     public static final class layout {
         public static final int color_list_preference_line_item = 0x7f030017;
@@ -396,7 +396,7 @@ public final class R {
         public static final int OpModeDialogTextAppearance = 0x7f070014;
     }
     public static final class styleable {
-        public static final int[] ColorListPreference = { 0x7f010018 };
+        public static final int[] ColorListPreference = { 0x7f01001a };
         public static final int ColorListPreference_colors = 0;
     }
 }

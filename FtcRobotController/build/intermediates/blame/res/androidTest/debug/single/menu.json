@@ -1,14 +1,14 @@
 [
     {
-        "merged": "/Users/alexyuan/Desktop/FTC/Programming/ftc_app-master_2017/FtcRobotController/build/intermediates/res/merged/androidTest/debug/menu/main_menu.xml",
-        "source": "/Users/alexyuan/.android/build-cache/6aca1a66c0449e9e8fe0c9105fb651bfbc274071/output/res/menu/main_menu.xml"
+        "merged": "/Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/FtcRobotController/build/intermediates/res/merged/androidTest/debug/menu/ftc_robot_controller.xml",
+        "source": "/Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/FtcRobotController/build/intermediates/bundles/debug/res/menu/ftc_robot_controller.xml"
     },
     {
-        "merged": "/Users/alexyuan/Desktop/FTC/Programming/ftc_app-master_2017/FtcRobotController/build/intermediates/res/merged/androidTest/debug/menu/menu_server.xml",
-        "source": "/Users/alexyuan/.android/build-cache/945b7b7757615a46e55b0ff78a188f8129c2b779/output/res/menu/menu_server.xml"
+        "merged": "/Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/FtcRobotController/build/intermediates/res/merged/androidTest/debug/menu/main_menu.xml",
+        "source": "/Users/alexyuan/.android/build-cache/ea469d498d3993c9b3a064b7141ffad7906eacc1/output/res/menu/main_menu.xml"
     },
     {
-        "merged": "/Users/alexyuan/Desktop/FTC/Programming/ftc_app-master_2017/FtcRobotController/build/intermediates/res/merged/androidTest/debug/menu/ftc_robot_controller.xml",
-        "source": "/Users/alexyuan/Desktop/FTC/Programming/ftc_app-master_2017/FtcRobotController/build/intermediates/bundles/debug/res/menu/ftc_robot_controller.xml"
+        "merged": "/Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/FtcRobotController/build/intermediates/res/merged/androidTest/debug/menu/menu_server.xml",
+        "source": "/Users/alexyuan/.android/build-cache/2ed08df1a5700543479e17d6798a0336acbf51be/output/res/menu/menu_server.xml"
     }
 ]
