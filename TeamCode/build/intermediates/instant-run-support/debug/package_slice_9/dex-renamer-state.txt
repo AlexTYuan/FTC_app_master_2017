@@ -1,0 +1,4 @@
+#Mon Nov 13 08:57:11 CST 2017
+base.0=/Users/alexyuan/Desktop/FTC/Programming/ftc_app-master_2017/TeamCode/build/intermediates/transforms/dex/debug/folders/1000/5/slice_9
+renamed.0=classes.dex
+file.0=/Users/alexyuan/Desktop/FTC/Programming/ftc_app-master_2017/TeamCode/build/intermediates/transforms/dex/debug/folders/1000/5/slice_9/classes.dex

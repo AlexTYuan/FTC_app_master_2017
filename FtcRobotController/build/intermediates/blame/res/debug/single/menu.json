@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "/Users/alexyuan/Desktop/FTC/Programming/ftc_app-master_2017/FtcRobotController/build/intermediates/res/merged/debug/menu/menu_server.xml",
+        "source": "/Users/alexyuan/.android/build-cache/945b7b7757615a46e55b0ff78a188f8129c2b779/output/res/menu/menu_server.xml"
+    },
+    {
+        "merged": "/Users/alexyuan/Desktop/FTC/Programming/ftc_app-master_2017/FtcRobotController/build/intermediates/res/merged/debug/menu/ftc_robot_controller.xml",
+        "source": "/Users/alexyuan/Desktop/FTC/Programming/ftc_app-master_2017/FtcRobotController/src/main/res/menu/ftc_robot_controller.xml"
+    },
+    {
+        "merged": "/Users/alexyuan/Desktop/FTC/Programming/ftc_app-master_2017/FtcRobotController/build/intermediates/res/merged/debug/menu/main_menu.xml",
+        "source": "/Users/alexyuan/.android/build-cache/6aca1a66c0449e9e8fe0c9105fb651bfbc274071/output/res/menu/main_menu.xml"
+    }
+]
