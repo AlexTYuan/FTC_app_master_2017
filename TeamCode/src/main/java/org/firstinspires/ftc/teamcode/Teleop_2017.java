@@ -48,7 +48,7 @@ import org.firstinspires.ftc.robotcontroller.external.samples.HardwarePushbot;
  * Remove or comment out the @Disabled line to add this opmode to the Driver Station OpMode list
  */
 
-@TeleOp(name="Robotics 2017: Margarine bot", group="Margarine")
+@TeleOp(name="Teleop: Margarine bot", group="Margarine")
 //@Disabled
 public class Teleop_2017 extends OpMode{
 
@@ -125,27 +125,42 @@ public class Teleop_2017 extends OpMode{
 
         //set the power of each motor to be the
         // (x direction + y direction) * turn rate + turn rate for robot not moving
+        /*
+        *  FL ________ FR
+        *    /        \
+        *   /          \
+        *
+        *  BL          BR
+        *   \          /
+        *    \________/
+        *
+        * */
         if (leftstickx < leftsticky && Math.abs(leftstickx) < leftsticky) {
+            //Robot moving forward: Direction of arm
             robot.FL.setPower((leftstickx + leftsticky) * left + (turn * multiplier));
             robot.FR.setPower((-leftstickx + leftsticky) * right + -(turn * multiplier));
             robot.BL.setPower((-leftstickx + leftsticky) * left + (turn * multiplier));
             robot.BR.setPower((leftstickx + leftsticky) * right + -(turn * multiplier));
         } else if (leftstickx >= leftsticky && leftstickx > 0) {
+            //Robot moving right: Direction right of arm
             robot.FL.setPower((leftstickx + leftsticky) * left + (turn * multiplier));
             robot.FR.setPower((-leftstickx + leftsticky) * left + (turn * multiplier));
             robot.BL.setPower((-leftstickx + leftsticky) * right + -(turn * multiplier));
             robot.BR.setPower((leftstickx + leftsticky) * right + -(turn * multiplier));
         } else if (leftstickx > leftsticky && leftstickx < Math.abs(leftsticky)) {
+            //Robot moving back: Direction opposite of arm
             robot.FL.setPower((leftstickx + leftsticky) * right + -(turn * multiplier));
             robot.FR.setPower((-leftstickx + leftsticky) * left + (turn * multiplier));
             robot.BL.setPower((-leftstickx + leftsticky) * right + -(turn * multiplier));
             robot.BR.setPower((leftstickx + leftsticky) * left + (turn * multiplier));
         } else if (leftstickx <= leftsticky && leftstickx < 0) {
+            //Robot moving left: Direction left of arm
             robot.FL.setPower((leftstickx + leftsticky) * right + -(turn * multiplier));
             robot.FR.setPower((-leftstickx + leftsticky) * right + -(turn * multiplier));
             robot.BL.setPower((-leftstickx + leftsticky) * left + (turn * multiplier));
             robot.BR.setPower((leftstickx + leftsticky) * left + (turn * multiplier));
         } else {
+            //In place turning
             robot.FL.setPower(-turn);
             robot.FR.setPower(turn);
             robot.BL.setPower(-turn);
@@ -160,22 +175,22 @@ public class Teleop_2017 extends OpMode{
     /** This method returns a clipped version of the motor power given by the joystick values
      * Clips the values in intervals of 0.2
      *
-     * @param x
-     * @return x
+     * @param power
+     * @return power
      */
-    public double ranged(double x) {
-        if (x < 0.2) {
-            x = 0;
-        } else if (x <= 0.4) {
-            x = 0.4;
-        } else if (x <= 0.6) {
-            x = 0.6;
-        } else if (x <= 0.8) {
-            x = 0.8;
+    public double ranged(double power) {
+        if (power < 0.2) {
+            power = 0;
+        } else if (power <= 0.4) {
+            power = 0.4;
+        } else if (power <= 0.6) {
+            power = 0.6;
+        } else if (power <= 0.8) {
+            power = 0.8;
         } else {
-            x = 1;
+            power = 1;
         }
-        return x;
+        return power;
     }
 
     /*

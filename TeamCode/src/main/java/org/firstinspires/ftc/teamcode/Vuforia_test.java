@@ -100,7 +100,20 @@ public class Vuforia_test extends LinearOpMode {
     Hardware_2017 robot = new Hardware_2017();
     private ElapsedTime runtime = new ElapsedTime();
 
+    public enum Direction {
+        FORWARD  (1),
+        BACKWARD (2),
+        LEFT     (3),
+        RIGHT    (4);
+
+        public final int direction;
+
+        Direction(int number) {this.direction = number;}
+    }
+
     @Override public void runOpMode() throws InterruptedException {
+
+//========================================================== Start of Autonomous Program ==========================================================//
 
 //========================================================== Set-up ==========================================================//
 
@@ -134,6 +147,7 @@ public class Vuforia_test extends LinearOpMode {
          * for a competition robot, the front camera might be more convenient.
          */
         parameters.cameraDirection = VuforiaLocalizer.CameraDirection.BACK;
+        parameters.useExtendedTracking = false;
         this.vuforia = ClassFactory.createVuforiaLocalizer(parameters);
         this.vuforia.setFrameQueueCapacity(3);
         Vuforia.setFrameFormat(PIXEL_FORMAT.RGB565, true);
@@ -259,6 +273,47 @@ public class Vuforia_test extends LinearOpMode {
 
 //========================================================== Pictograph-Detection ==========================================================//
 
+
+//========================================================== End of Autonomous Program ==========================================================//
+
+    /** Drives the robot in the desired direction "direction" at power "power" for "time" seconds
+     *
+     * @param direction
+     * @param power
+     * @param time
+     */
+    public void driveMotors(Direction direction, int power, float time) {
+        //set power
+        if (direction == Direction.FORWARD) {
+            robot.FL.setPower(power);
+            robot.FR.setPower(power);
+            robot.BL.setPower(power);
+            robot.BR.setPower(power);
+        } else if (direction == Direction.BACKWARD) {
+            robot.FL.setPower(-power);
+            robot.FR.setPower(-power);
+            robot.BL.setPower(-power);
+            robot.BR.setPower(-power);
+        } else if (direction == Direction.LEFT) {
+            robot.FL.setPower(-power);
+            robot.FR.setPower(power);
+            robot.BL.setPower(power);
+            robot.BR.setPower(-power);
+        } else if (direction == Direction.RIGHT) {
+            robot.FL.setPower(power);
+            robot.FR.setPower(-power);
+            robot.BL.setPower(-power);
+            robot.BR.setPower(power);
+        }
+        runtime.reset();
+        while(opModeIsActive() && runtime.seconds() <= time) {
+            //wait
+        }
+        robot.FL.setPower(0);
+        robot.FR.setPower(0);
+        robot.BL.setPower(0);
+        robot.BR.setPower(0);
+    }
 //    public Image getImage(){
 //        VuforiaLocalizer.CloseableFrame frame = null;
 //        try{
