@@ -29,6 +29,8 @@
 
 package org.firstinspires.ftc.teamcode;
 
+import com.qualcomm.hardware.bosch.BNO055IMU;
+import com.qualcomm.hardware.bosch.JustLoggingAccelerationIntegrator;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.DcMotorSimple;
 import com.qualcomm.robotcore.hardware.HardwareMap;
@@ -54,14 +56,16 @@ import com.qualcomm.robotcore.util.ElapsedTime;
 public class Hardware_2017
 {
     /* Public OpMode members. */
-    public DcMotor FL = null;
-    public DcMotor FR = null;
-    public DcMotor BL = null;
-    public DcMotor BR = null;
-    public DcMotor Turntable = null;
+    public DcMotor FL           = null;
+    public DcMotor FR           = null;
+    public DcMotor BL           = null;
+    public DcMotor BR           = null;
+    public DcMotor Turntable    = null;
+
+    public BNO055IMU Imu        = null;
 
     /* local OpMode members. */
-    HardwareMap hwMap           =  null;
+    HardwareMap hwMap           = null;
     private ElapsedTime period  = new ElapsedTime();
 
     /* Constructor */
@@ -74,11 +78,22 @@ public class Hardware_2017
         // Save reference to Hardware map
         hwMap = ahwMap;
 
+        BNO055IMU.Parameters parameters = new BNO055IMU.Parameters();
+        parameters.angleUnit           = BNO055IMU.AngleUnit.DEGREES;
+        parameters.accelUnit           = BNO055IMU.AccelUnit.METERS_PERSEC_PERSEC;
+        parameters.calibrationDataFile = "BNO055IMUCalibration.json"; // see the calibration sample opmode
+        parameters.loggingEnabled      = true;
+        parameters.loggingTag          = "IMU";
+        parameters.accelerationIntegrationAlgorithm = new JustLoggingAccelerationIntegrator();
+
         FL = hwMap.get(DcMotor.class, "fl");
         FR = hwMap.get(DcMotor.class, "fr");
         BL = hwMap.get(DcMotor.class, "bl");
         BR = hwMap.get(DcMotor.class, "br");
         Turntable = hwMap.get(DcMotor.class, "turn");
+        Imu = hwMap.get(BNO055IMU.class, "imu");
+
+        Imu.initialize(parameters);
 
         FL.setDirection(DcMotor.Direction.FORWARD);
         FR.setDirection(DcMotor.Direction.REVERSE);
