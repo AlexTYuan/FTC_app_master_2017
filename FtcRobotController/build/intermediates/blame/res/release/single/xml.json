@@ -1,0 +1,42 @@
+[
+    {
+        "merged": "/Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/FtcRobotController/build/intermediates/res/merged/release/xml/squarebot.xml",
+        "source": "/Users/alexyuan/.android/build-cache/00ce7909adaa2ea5fbc6e727ee831f0fbc0b6e5f/output/res/xml/squarebot.xml"
+    },
+    {
+        "merged": "/Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/FtcRobotController/build/intermediates/res/merged/release/xml/k9usbbot.xml",
+        "source": "/Users/alexyuan/.android/build-cache/00ce7909adaa2ea5fbc6e727ee831f0fbc0b6e5f/output/res/xml/k9usbbot.xml"
+    },
+    {
+        "merged": "/Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/FtcRobotController/build/intermediates/res/merged/release/xml/rev_scoot.xml",
+        "source": "/Users/alexyuan/.android/build-cache/00ce7909adaa2ea5fbc6e727ee831f0fbc0b6e5f/output/res/xml/rev_scoot.xml"
+    },
+    {
+        "merged": "/Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/FtcRobotController/build/intermediates/res/merged/release/xml/advanced_rc_settings.xml",
+        "source": "/Users/alexyuan/.android/build-cache/00ce7909adaa2ea5fbc6e727ee831f0fbc0b6e5f/output/res/xml/advanced_rc_settings.xml"
+    },
+    {
+        "merged": "/Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/FtcRobotController/build/intermediates/res/merged/release/xml/app_settings.xml",
+        "source": "/Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/FtcRobotController/src/main/res/xml/app_settings.xml"
+    },
+    {
+        "merged": "/Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/FtcRobotController/build/intermediates/res/merged/release/xml/k9legacybot.xml",
+        "source": "/Users/alexyuan/.android/build-cache/00ce7909adaa2ea5fbc6e727ee831f0fbc0b6e5f/output/res/xml/k9legacybot.xml"
+    },
+    {
+        "merged": "/Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/FtcRobotController/build/intermediates/res/merged/release/xml/maxmodules.xml",
+        "source": "/Users/alexyuan/.android/build-cache/00ce7909adaa2ea5fbc6e727ee831f0fbc0b6e5f/output/res/xml/maxmodules.xml"
+    },
+    {
+        "merged": "/Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/FtcRobotController/build/intermediates/res/merged/release/xml/pushbotsens.xml",
+        "source": "/Users/alexyuan/.android/build-cache/00ce7909adaa2ea5fbc6e727ee831f0fbc0b6e5f/output/res/xml/pushbotsens.xml"
+    },
+    {
+        "merged": "/Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/FtcRobotController/build/intermediates/res/merged/release/xml/pushbot.xml",
+        "source": "/Users/alexyuan/.android/build-cache/00ce7909adaa2ea5fbc6e727ee831f0fbc0b6e5f/output/res/xml/pushbot.xml"
+    },
+    {
+        "merged": "/Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/FtcRobotController/build/intermediates/res/merged/release/xml/device_filter.xml",
+        "source": "/Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/FtcRobotController/src/main/res/xml/device_filter.xml"
+    }
+]

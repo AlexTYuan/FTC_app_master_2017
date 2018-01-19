@@ -40,9 +40,11 @@ import com.vuforia.Image;
 
 import org.firstinspires.ftc.robotcontroller.external.samples.ConceptVuforiaNavigation;
 import org.firstinspires.ftc.robotcore.external.ClassFactory;
+import org.firstinspires.ftc.robotcore.external.Func;
 import org.firstinspires.ftc.robotcore.external.Telemetry;
 import org.firstinspires.ftc.robotcore.external.matrices.OpenGLMatrix;
 import org.firstinspires.ftc.robotcore.external.matrices.VectorF;
+import org.firstinspires.ftc.robotcore.external.navigation.Acceleration;
 import org.firstinspires.ftc.robotcore.external.navigation.AngleUnit;
 import org.firstinspires.ftc.robotcore.external.navigation.AxesOrder;
 import org.firstinspires.ftc.robotcore.external.navigation.AxesReference;
@@ -57,6 +59,8 @@ import org.opencv.android.Utils;
 import org.opencv.core.CvType;
 import org.opencv.core.Mat;
 import org.opencv.imgproc.Imgproc;
+
+import java.util.Locale;
 
 import ftc.vision.BeaconColorResult;
 import ftc.vision.BeaconProcessor;
@@ -100,11 +104,18 @@ public class Vuforia_test extends LinearOpMode {
     Hardware_2017 robot = new Hardware_2017();
     private ElapsedTime runtime = new ElapsedTime();
 
+    Orientation angles;
+    Acceleration gravity;
+    public double startingangle;
+
+
     public enum Direction {
         FORWARD  (1),
         BACKWARD (2),
         LEFT     (3),
-        RIGHT    (4);
+        RIGHT    (4),
+        CLOCKWISE (5),
+        ANTICLOCKWISE (6);
 
         public final int direction;
 
@@ -116,6 +127,9 @@ public class Vuforia_test extends LinearOpMode {
 //========================================================== Start of Autonomous Program ==========================================================//
 
 //========================================================== Set-up ==========================================================//
+
+        robot.init(hardwareMap);
+        composeTelemetry();
 
         /*
          * To start up Vuforia, tell it the view that we wish to use for camera monitor (on the RC phone);
@@ -147,7 +161,7 @@ public class Vuforia_test extends LinearOpMode {
          * for a competition robot, the front camera might be more convenient.
          */
         parameters.cameraDirection = VuforiaLocalizer.CameraDirection.BACK;
-        parameters.useExtendedTracking = false;
+//        parameters.useExtendedTracking = false;
         this.vuforia = ClassFactory.createVuforiaLocalizer(parameters);
         this.vuforia.setFrameQueueCapacity(3);
         Vuforia.setFrameFormat(PIXEL_FORMAT.RGB565, true);
@@ -164,6 +178,7 @@ public class Vuforia_test extends LinearOpMode {
 
         telemetry.addData(">", "Press Play to start");
         telemetry.update();
+        startingangle = (int) angles.firstAngle;
         waitForStart();
 
         relicTrackables.activate();
@@ -198,7 +213,7 @@ public class Vuforia_test extends LinearOpMode {
             long frameTime = System.currentTimeMillis();
 //            ImageUtil.saveImage("a", tmp, Imgproc.COLOR_RGBA2BGR, "0_camera", frameTime);
             ImageProcessor processor = new BeaconProcessor();
-            ImageProcessorResult processorResult =  processor.process(frameTime, tmp, true);
+            ImageProcessorResult processorResult =  processor.process(frameTime, tmp, false);
             BeaconColorResult colorResult = (BeaconColorResult) processorResult.getResult();
 
             //color results from processing images
@@ -238,9 +253,10 @@ public class Vuforia_test extends LinearOpMode {
                 OpenGLMatrix pose = ((VuforiaTrackableDefaultListener) relicTemplate.getListener()).getPose();
                 telemetry.addData("Pose", format(pose));
 
+
                 /* We further illustrate how to decompose the pose into useful rotational and
                  * translational components */
-                if (pose != null) {
+//                if (pose != null) {
                     VectorF trans = pose.getTranslation();
                     Orientation rot = Orientation.getOrientation(pose, AxesReference.EXTRINSIC, AxesOrder.XYZ, AngleUnit.DEGREES);
 
@@ -253,20 +269,44 @@ public class Vuforia_test extends LinearOpMode {
                     double rX = rot.firstAngle;
                     double rY = rot.secondAngle;
                     double rZ = rot.thirdAngle;
-                }
+//                }
                 //move certain distance based on which VuMark it is
-                if (vuMark == RelicRecoveryVuMark.CENTER) {
-
+                //19.87 inches first  slot 50.47 cm
+                //27.5  inches second slot 69.85 cm
+                //35.13 inches third  slot 89.23 cm
+                //track y value for horizontal movement
+                //negative for moving left of picture and positive for right of picture
+                if (vuMark == RelicRecoveryVuMark.RIGHT) {
+                    setMotorPower(0.1, Direction.RIGHT);
+                    while (opModeIsActive() && tY >= -50.47) {
+                        telemetry.addData("Position", tY);
+                        telemetry.update();
+                        regulateAngle(angles.firstAngle);
+                    }
+                    setMotorPower(0, Direction.RIGHT);
+                } else if (vuMark == RelicRecoveryVuMark.CENTER) {
+                    setMotorPower(0.1, Direction.RIGHT);
+                    while (opModeIsActive() && tY >= -69.85) {
+                        telemetry.addData("Position", tY);
+                        telemetry.update();
+                        regulateAngle(angles.firstAngle);
+                    }
+                    setMotorPower(0, Direction.RIGHT);
                 } else if (vuMark == RelicRecoveryVuMark.LEFT) {
-
-                } else if (vuMark == RelicRecoveryVuMark.RIGHT) {
-
+                    setMotorPower(0.1, Direction.RIGHT);
+                    while (opModeIsActive() && tY >= -89.23) {
+                        telemetry.addData("Position", tY);
+                        telemetry.update();
+                        regulateAngle(angles.firstAngle);
+                    }
+                    setMotorPower(0, Direction.RIGHT);
                 }
 
                 //lower arm and release the glyph
             } else {
                 telemetry.addData("VuMark", "not visible");
                 //move in direction of pictograph to detect it
+                setMotorPower(0.1, Direction.RIGHT);
             }
         }
     }
@@ -276,14 +316,39 @@ public class Vuforia_test extends LinearOpMode {
 
 //========================================================== End of Autonomous Program ==========================================================//
 
+    public void regulateAngle(double angle) {
+        if (startingangle == 180 && angle < 0 || startingangle == -180 && angle > 0) {
+            angle = -angle;
+        }
+        if (!(startingangle - angle > 1) || !(startingangle - angle < 1)) {
+            turn(startingangle - angle, 0.1);
+        }
+    }
+
     /** Drives the robot in the desired direction "direction" at power "power" for "time" seconds
      *
      * @param direction
      * @param power
      * @param time
      */
-    public void driveMotors(Direction direction, int power, float time) {
+    public void driveMotors(Direction direction, double power, float time) {
         //set power
+        setMotorPower(power, direction);
+        runtime.reset();
+        while(opModeIsActive() && runtime.seconds() <= time) {
+            //wait
+        }
+        robot.FL.setPower(0);
+        robot.FR.setPower(0);
+        robot.BL.setPower(0);
+        robot.BR.setPower(0);
+    }
+
+    /**
+     *
+     * @param power
+     */
+    public void setMotorPower(double power, Direction direction) {
         if (direction == Direction.FORWARD) {
             robot.FL.setPower(power);
             robot.FR.setPower(power);
@@ -304,15 +369,36 @@ public class Vuforia_test extends LinearOpMode {
             robot.FR.setPower(-power);
             robot.BL.setPower(-power);
             robot.BR.setPower(power);
+        } else if (direction == Direction.CLOCKWISE) {
+            robot.FL.setPower(power);
+            robot.FR.setPower(-power);
+            robot.BL.setPower(power);
+            robot.BR.setPower(-power);
+        } else if (direction == Direction.ANTICLOCKWISE) {
+            robot.FL.setPower(-power);
+            robot.FR.setPower(power);
+            robot.BL.setPower(-power);
+            robot.BR.setPower(power);
         }
-        runtime.reset();
-        while(opModeIsActive() && runtime.seconds() <= time) {
-            //wait
+    }
+
+    /**
+     *
+     * @param degrees
+     * @param power
+     */
+    public void turn(double degrees, double power) {
+        if (degrees > 0) {
+            setMotorPower(power, Direction.ANTICLOCKWISE);
+            while (opModeIsActive() && angles.firstAngle > startingangle + degrees) {
+                //
+            }
+        } else {
+            setMotorPower(power, Direction.CLOCKWISE);
+            while (opModeIsActive() && angles.firstAngle < startingangle + degrees) {
+                //
+            }
         }
-        robot.FL.setPower(0);
-        robot.FR.setPower(0);
-        robot.BL.setPower(0);
-        robot.BR.setPower(0);
     }
 //    public Image getImage(){
 //        VuforiaLocalizer.CloseableFrame frame = null;
@@ -339,6 +425,77 @@ public class Vuforia_test extends LinearOpMode {
 //        }
 //
 //    }
+
+    //----------------------------------------------------------------------------------------------
+    // Formatting
+    //----------------------------------------------------------------------------------------------
+
+    void composeTelemetry() {
+
+        // At the beginning of each telemetry update, grab a bunch of data
+        // from the IMU that we will then display in separate lines.
+        telemetry.addAction(new Runnable() { @Override public void run()
+        {
+            // Acquiring the angles is relatively expensive; we don't want
+            // to do that in each of the three items that need that info, as that's
+            // three times the necessary expense.
+            angles   = robot.imu.getAngularOrientation(AxesReference.INTRINSIC, AxesOrder.ZYX, AngleUnit.DEGREES);
+            gravity  = robot.imu.getGravity();
+        }
+        });
+
+        telemetry.addLine()
+                .addData("status", new Func<String>() {
+                    @Override public String value() {
+                        return robot.imu.getSystemStatus().toShortString();
+                    }
+                })
+                .addData("calib", new Func<String>() {
+                    @Override public String value() {
+                        return robot.imu.getCalibrationStatus().toString();
+                    }
+                });
+
+        telemetry.addLine()
+                .addData("heading", new Func<String>() {
+                    @Override public String value() {
+                        return formatAngle(angles.angleUnit, angles.firstAngle);
+                    }
+                })
+                .addData("roll", new Func<String>() {
+                    @Override public String value() {
+                        return formatAngle(angles.angleUnit, angles.secondAngle);
+                    }
+                })
+                .addData("pitch", new Func<String>() {
+                    @Override public String value() {
+                        return formatAngle(angles.angleUnit, angles.thirdAngle);
+                    }
+                });
+
+        telemetry.addLine()
+                .addData("grvty", new Func<String>() {
+                    @Override public String value() {
+                        return gravity.toString();
+                    }
+                })
+                .addData("mag", new Func<String>() {
+                    @Override public String value() {
+                        return String.format(Locale.getDefault(), "%.3f",
+                                Math.sqrt(gravity.xAccel*gravity.xAccel
+                                        + gravity.yAccel*gravity.yAccel
+                                        + gravity.zAccel*gravity.zAccel));
+                    }
+                });
+    }
+
+    String formatAngle(AngleUnit angleUnit, double angle) {
+        return formatDegrees(AngleUnit.DEGREES.fromUnit(angleUnit, angle));
+    }
+
+    String formatDegrees(double degrees){
+        return String.format(Locale.getDefault(), "%.1f", AngleUnit.DEGREES.normalize(degrees));
+    }
 
     String format(OpenGLMatrix transformationMatrix) {
         return (transformationMatrix != null) ? transformationMatrix.formatAsTransform() : "null";

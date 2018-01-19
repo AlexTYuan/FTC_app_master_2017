@@ -100,6 +100,9 @@ public class Teleop_2017 extends OpMode{
         leftstickx = gamepad1.left_stick_x;
         turn = gamepad1.right_stick_x;
 
+        leftstickx = Math.pow(leftstickx, 3);
+        leftsticky = Math.pow(leftsticky, 3);
+
         //set motor powers to be in interavls of 0.2
         ranged(leftstickx);
         ranged(leftsticky);
@@ -167,6 +170,23 @@ public class Teleop_2017 extends OpMode{
             robot.BR.setPower(turn);
         }
 
+
+        if (gamepad1.right_bumper) {
+            robot.Turntable.setPower(0.3);
+        } else if (gamepad1.left_bumper) {
+            robot.Turntable.setPower(-0.3);
+        } else {
+            robot.Turntable.setPower(0);
+        }
+
+
+        double RT = gamepad1.right_trigger;
+        double LT = gamepad1.left_trigger;
+
+        RT = Math.pow(RT, 3);
+        LT = Math.pow(LT, 3);
+
+        robot.Arm.setPower(RT - LT);
 
 
     }

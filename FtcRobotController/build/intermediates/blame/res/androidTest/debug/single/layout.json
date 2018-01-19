@@ -12,12 +12,12 @@
         "source": "/Users/alexyuan/.android/build-cache/00ce7909adaa2ea5fbc6e727ee831f0fbc0b6e5f/output/res/layout/i2cs.xml"
     },
     {
-        "merged": "/Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/FtcRobotController/build/intermediates/res/merged/androidTest/debug/layout/red_line.xml",
-        "source": "/Users/alexyuan/.android/build-cache/00ce7909adaa2ea5fbc6e727ee831f0fbc0b6e5f/output/res/layout/red_line.xml"
-    },
-    {
         "merged": "/Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/FtcRobotController/build/intermediates/res/merged/androidTest/debug/layout/device_interface_module.xml",
         "source": "/Users/alexyuan/.android/build-cache/00ce7909adaa2ea5fbc6e727ee831f0fbc0b6e5f/output/res/layout/device_interface_module.xml"
+    },
+    {
+        "merged": "/Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/FtcRobotController/build/intermediates/res/merged/androidTest/debug/layout/red_line.xml",
+        "source": "/Users/alexyuan/.android/build-cache/00ce7909adaa2ea5fbc6e727ee831f0fbc0b6e5f/output/res/layout/red_line.xml"
     },
     {
         "merged": "/Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/FtcRobotController/build/intermediates/res/merged/androidTest/debug/layout/motor.xml",
@@ -48,12 +48,12 @@
         "source": "/Users/alexyuan/.android/build-cache/00ce7909adaa2ea5fbc6e727ee831f0fbc0b6e5f/output/res/layout/servo_controller_banner.xml"
     },
     {
-        "merged": "/Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/FtcRobotController/build/intermediates/res/merged/androidTest/debug/layout/analog_outputs.xml",
-        "source": "/Users/alexyuan/.android/build-cache/00ce7909adaa2ea5fbc6e727ee831f0fbc0b6e5f/output/res/layout/analog_outputs.xml"
-    },
-    {
         "merged": "/Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/FtcRobotController/build/intermediates/res/merged/androidTest/debug/layout/i2c_device.xml",
         "source": "/Users/alexyuan/.android/build-cache/00ce7909adaa2ea5fbc6e727ee831f0fbc0b6e5f/output/res/layout/i2c_device.xml"
+    },
+    {
+        "merged": "/Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/FtcRobotController/build/intermediates/res/merged/androidTest/debug/layout/analog_outputs.xml",
+        "source": "/Users/alexyuan/.android/build-cache/00ce7909adaa2ea5fbc6e727ee831f0fbc0b6e5f/output/res/layout/analog_outputs.xml"
     },
     {
         "merged": "/Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/FtcRobotController/build/intermediates/res/merged/androidTest/debug/layout/button_list.xml",

@@ -61,8 +61,9 @@ public class Hardware_2017
     public DcMotor BL           = null;
     public DcMotor BR           = null;
     public DcMotor Turntable    = null;
+    public DcMotor Arm          = null;
 
-    public BNO055IMU Imu        = null;
+    public BNO055IMU imu        = null;
 
     /* local OpMode members. */
     HardwareMap hwMap           = null;
@@ -91,15 +92,17 @@ public class Hardware_2017
         BL = hwMap.get(DcMotor.class, "bl");
         BR = hwMap.get(DcMotor.class, "br");
         Turntable = hwMap.get(DcMotor.class, "turn");
-        Imu = hwMap.get(BNO055IMU.class, "imu");
+        Arm = hwMap.get(DcMotor.class, "arm");
+        imu = hwMap.get(BNO055IMU.class, "imu");
 
-        Imu.initialize(parameters);
+        imu.initialize(parameters);
 
-        FL.setDirection(DcMotor.Direction.FORWARD);
-        FR.setDirection(DcMotor.Direction.REVERSE);
-        BL.setDirection(DcMotor.Direction.FORWARD);
-        BR.setDirection(DcMotor.Direction.REVERSE);
+        FL.setDirection(DcMotor.Direction.REVERSE);
+        FR.setDirection(DcMotor.Direction.FORWARD);
+        BL.setDirection(DcMotor.Direction.REVERSE);
+        BR.setDirection(DcMotor.Direction.FORWARD);
         Turntable.setDirection(DcMotor.Direction.FORWARD);
+        Arm.setDirection(DcMotorSimple.Direction.FORWARD);
 
         FL.setPower(0);
         FR.setPower(0);
@@ -112,12 +115,14 @@ public class Hardware_2017
         BL.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
         BR.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
         Turntable.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
+        Arm.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
 
         FL.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
         FR.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
         BL.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
         BR.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
         Turntable.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
+        Arm.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
     }
  }
 

@@ -55,7 +55,7 @@ import java.util.Locale;
  * @see <a href="http://www.adafruit.com/products/2472">Adafruit IMU</a>
  */
 @Autonomous(name = "Sensor: BNO055 IMU", group = "Sensor")
-@Disabled                            // Comment this out to add to the opmode list
+//@Disabled                            // Comment this out to add to the opmode list
 public class SensorBNO055IMU extends LinearOpMode
     {
     //----------------------------------------------------------------------------------------------
@@ -68,6 +68,8 @@ public class SensorBNO055IMU extends LinearOpMode
     // State used for updating telemetry
     Orientation angles;
     Acceleration gravity;
+        Orientation             lastAngles = new Orientation();
+        double globalAngle= .30;
 
     //----------------------------------------------------------------------------------------------
     // Main logic
@@ -104,6 +106,7 @@ public class SensorBNO055IMU extends LinearOpMode
         // Loop and update the dashboard
         while (opModeIsActive()) {
             telemetry.update();
+            telemetry.addData("angles", angles.firstAngle);
         }
     }
 
@@ -170,6 +173,29 @@ public class SensorBNO055IMU extends LinearOpMode
                 });
     }
 
+
+        private double getAngle()
+        {
+            // We experimentally determined the Z axis is the axis we want to use for heading angle.
+            // We have to process the angle because the imu works in euler angles so the Z axis is
+            // returned as 0 to +180 or 0 to -180 rolling back to -179 or +179 when rotation passes
+            // 180 degrees. We detect this transition and track the total cumulative angle of rotation.
+
+            Orientation angles = imu.getAngularOrientation(AxesReference.INTRINSIC, AxesOrder.ZYX, AngleUnit.DEGREES);
+
+            double deltaAngle = angles.firstAngle - lastAngles.firstAngle;
+
+            if (deltaAngle < -180)
+                deltaAngle += 360;
+            else if (deltaAngle > 180)
+                deltaAngle -= 360;
+
+            globalAngle += deltaAngle;
+
+            lastAngles = angles;
+
+            return globalAngle;
+        }
     //----------------------------------------------------------------------------------------------
     // Formatting
     //----------------------------------------------------------------------------------------------

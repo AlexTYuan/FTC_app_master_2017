@@ -15,24 +15,24 @@ ADDED from /Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/TeamCode/
 		INJECTED from /Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/TeamCode/src/main/AndroidManifest.xml
 application
 ADDED from /Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/TeamCode/src/main/AndroidManifest.xml:11:5-19
-MERGED from [FTC_app_master_2017:FtcRobotController:unspecified] /Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/FtcRobotController/build/intermediates/bundles/default/AndroidManifest.xml:14:5-45:19
+MERGED from [FTC_app_master_2017:FtcRobotController:unspecified] /Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/FtcRobotController/build/intermediates/bundles/default/AndroidManifest.xml:36:5-67:19
 MERGED from [:Inspection-release:] /Users/alexyuan/.android/build-cache/ea469d498d3993c9b3a064b7141ffad7906eacc1/output/AndroidManifest.xml:19:5-30:19
 MERGED from [:Blocks-release:] /Users/alexyuan/.android/build-cache/2ed08df1a5700543479e17d6798a0336acbf51be/output/AndroidManifest.xml:18:5-39:19
 MERGED from [:RobotCore-release:] /Users/alexyuan/.android/build-cache/372246ff2193a2a2b11da952ac5209b6a64f2767/output/AndroidManifest.xml:67:5-86:19
 MERGED from [:FtcCommon-release:] /Users/alexyuan/.android/build-cache/00ce7909adaa2ea5fbc6e727ee831f0fbc0b6e5f/output/AndroidManifest.xml:22:5-222:19
 MERGED from [:Analytics-release:] /Users/alexyuan/.android/build-cache/87553c006931ccc13c4538855a6b4b53e055c458/output/AndroidManifest.xml:19:5-24:19
 	android:label
-		ADDED from [FTC_app_master_2017:FtcRobotController:unspecified] /Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/FtcRobotController/build/intermediates/bundles/default/AndroidManifest.xml:17:9-41
+		ADDED from [FTC_app_master_2017:FtcRobotController:unspecified] /Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/FtcRobotController/build/intermediates/bundles/default/AndroidManifest.xml:39:9-41
 	android:exported
 		ADDED from [:Analytics-release:] /Users/alexyuan/.android/build-cache/87553c006931ccc13c4538855a6b4b53e055c458/output/AndroidManifest.xml:21:9-32
 	android:allowBackup
-		ADDED from [FTC_app_master_2017:FtcRobotController:unspecified] /Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/FtcRobotController/build/intermediates/bundles/default/AndroidManifest.xml:15:9-35
+		ADDED from [FTC_app_master_2017:FtcRobotController:unspecified] /Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/FtcRobotController/build/intermediates/bundles/default/AndroidManifest.xml:37:9-35
 	android:icon
-		ADDED from [FTC_app_master_2017:FtcRobotController:unspecified] /Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/FtcRobotController/build/intermediates/bundles/default/AndroidManifest.xml:16:9-45
+		ADDED from [FTC_app_master_2017:FtcRobotController:unspecified] /Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/FtcRobotController/build/intermediates/bundles/default/AndroidManifest.xml:38:9-45
 	android:largeHeap
-		ADDED from [FTC_app_master_2017:FtcRobotController:unspecified] /Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/FtcRobotController/build/intermediates/bundles/default/AndroidManifest.xml:18:9-33
+		ADDED from [FTC_app_master_2017:FtcRobotController:unspecified] /Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/FtcRobotController/build/intermediates/bundles/default/AndroidManifest.xml:40:9-33
 	android:theme
-		ADDED from [FTC_app_master_2017:FtcRobotController:unspecified] /Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/FtcRobotController/build/intermediates/bundles/default/AndroidManifest.xml:19:9-45
+		ADDED from [FTC_app_master_2017:FtcRobotController:unspecified] /Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/FtcRobotController/build/intermediates/bundles/default/AndroidManifest.xml:41:9-45
 	android:name
 		ADDED from [:RobotCore-release:] /Users/alexyuan/.android/build-cache/372246ff2193a2a2b11da952ac5209b6a64f2767/output/AndroidManifest.xml:67:18-97
 uses-sdk
@@ -56,44 +56,87 @@ uses-permission#android.permission.RECEIVE_BOOT_COMPLETED
 ADDED from [FTC_app_master_2017:FtcRobotController:unspecified] /Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/FtcRobotController/build/intermediates/bundles/default/AndroidManifest.xml:12:5-81
 	android:name
 		ADDED from [FTC_app_master_2017:FtcRobotController:unspecified] /Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/FtcRobotController/build/intermediates/bundles/default/AndroidManifest.xml:12:22-78
+supports-screens
+ADDED from [FTC_app_master_2017:FtcRobotController:unspecified] /Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/FtcRobotController/build/intermediates/bundles/default/AndroidManifest.xml:14:5-19:39
+	android:largeScreens
+		ADDED from [FTC_app_master_2017:FtcRobotController:unspecified] /Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/FtcRobotController/build/intermediates/bundles/default/AndroidManifest.xml:16:9-36
+	android:smallScreens
+		ADDED from [FTC_app_master_2017:FtcRobotController:unspecified] /Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/FtcRobotController/build/intermediates/bundles/default/AndroidManifest.xml:19:9-36
+	android:normalScreens
+		ADDED from [FTC_app_master_2017:FtcRobotController:unspecified] /Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/FtcRobotController/build/intermediates/bundles/default/AndroidManifest.xml:17:9-37
+	android:resizeable
+		ADDED from [FTC_app_master_2017:FtcRobotController:unspecified] /Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/FtcRobotController/build/intermediates/bundles/default/AndroidManifest.xml:18:9-34
+	android:anyDensity
+		ADDED from [FTC_app_master_2017:FtcRobotController:unspecified] /Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/FtcRobotController/build/intermediates/bundles/default/AndroidManifest.xml:15:9-34
+uses-permission#android.permission.CAMERA
+ADDED from [FTC_app_master_2017:FtcRobotController:unspecified] /Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/FtcRobotController/build/intermediates/bundles/default/AndroidManifest.xml:21:5-65
+MERGED from [:RobotCore-release:] /Users/alexyuan/.android/build-cache/372246ff2193a2a2b11da952ac5209b6a64f2767/output/AndroidManifest.xml:48:5-65
+	android:name
+		ADDED from [FTC_app_master_2017:FtcRobotController:unspecified] /Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/FtcRobotController/build/intermediates/bundles/default/AndroidManifest.xml:21:22-62
+uses-feature#android.hardware.camera
+ADDED from [FTC_app_master_2017:FtcRobotController:unspecified] /Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/FtcRobotController/build/intermediates/bundles/default/AndroidManifest.xml:23:5-25:36
+MERGED from [:RobotCore-release:] /Users/alexyuan/.android/build-cache/372246ff2193a2a2b11da952ac5209b6a64f2767/output/AndroidManifest.xml:65:5-60
+	android:required
+		ADDED from [FTC_app_master_2017:FtcRobotController:unspecified] /Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/FtcRobotController/build/intermediates/bundles/default/AndroidManifest.xml:25:9-33
+		MERGED from /Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/TeamCode/src/main/AndroidManifest.xml
+	android:name
+		ADDED from [FTC_app_master_2017:FtcRobotController:unspecified] /Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/FtcRobotController/build/intermediates/bundles/default/AndroidManifest.xml:24:9-47
+uses-feature#android.hardware.camera.autofocus
+ADDED from [FTC_app_master_2017:FtcRobotController:unspecified] /Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/FtcRobotController/build/intermediates/bundles/default/AndroidManifest.xml:26:5-28:36
+	android:required
+		ADDED from [FTC_app_master_2017:FtcRobotController:unspecified] /Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/FtcRobotController/build/intermediates/bundles/default/AndroidManifest.xml:28:9-33
+	android:name
+		ADDED from [FTC_app_master_2017:FtcRobotController:unspecified] /Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/FtcRobotController/build/intermediates/bundles/default/AndroidManifest.xml:27:9-57
+uses-feature#android.hardware.camera.front
+ADDED from [FTC_app_master_2017:FtcRobotController:unspecified] /Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/FtcRobotController/build/intermediates/bundles/default/AndroidManifest.xml:29:5-31:36
+	android:required
+		ADDED from [FTC_app_master_2017:FtcRobotController:unspecified] /Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/FtcRobotController/build/intermediates/bundles/default/AndroidManifest.xml:31:9-33
+	android:name
+		ADDED from [FTC_app_master_2017:FtcRobotController:unspecified] /Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/FtcRobotController/build/intermediates/bundles/default/AndroidManifest.xml:30:9-53
+uses-feature#android.hardware.camera.front.autofocus
+ADDED from [FTC_app_master_2017:FtcRobotController:unspecified] /Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/FtcRobotController/build/intermediates/bundles/default/AndroidManifest.xml:32:5-34:36
+	android:required
+		ADDED from [FTC_app_master_2017:FtcRobotController:unspecified] /Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/FtcRobotController/build/intermediates/bundles/default/AndroidManifest.xml:34:9-33
+	android:name
+		ADDED from [FTC_app_master_2017:FtcRobotController:unspecified] /Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/FtcRobotController/build/intermediates/bundles/default/AndroidManifest.xml:33:9-63
 activity#org.firstinspires.ftc.robotcontroller.internal.FtcRobotControllerActivity
-ADDED from [FTC_app_master_2017:FtcRobotController:unspecified] /Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/FtcRobotController/build/intermediates/bundles/default/AndroidManifest.xml:22:9-39:20
+ADDED from [FTC_app_master_2017:FtcRobotController:unspecified] /Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/FtcRobotController/build/intermediates/bundles/default/AndroidManifest.xml:44:9-61:20
 	android:label
-		ADDED from [FTC_app_master_2017:FtcRobotController:unspecified] /Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/FtcRobotController/build/intermediates/bundles/default/AndroidManifest.xml:25:13-45
+		ADDED from [FTC_app_master_2017:FtcRobotController:unspecified] /Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/FtcRobotController/build/intermediates/bundles/default/AndroidManifest.xml:47:13-45
 	android:launchMode
-		ADDED from [FTC_app_master_2017:FtcRobotController:unspecified] /Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/FtcRobotController/build/intermediates/bundles/default/AndroidManifest.xml:26:13-44
+		ADDED from [FTC_app_master_2017:FtcRobotController:unspecified] /Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/FtcRobotController/build/intermediates/bundles/default/AndroidManifest.xml:48:13-44
 	android:configChanges
-		ADDED from [FTC_app_master_2017:FtcRobotController:unspecified] /Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/FtcRobotController/build/intermediates/bundles/default/AndroidManifest.xml:24:13-59
+		ADDED from [FTC_app_master_2017:FtcRobotController:unspecified] /Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/FtcRobotController/build/intermediates/bundles/default/AndroidManifest.xml:46:13-59
 	android:name
-		ADDED from [FTC_app_master_2017:FtcRobotController:unspecified] /Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/FtcRobotController/build/intermediates/bundles/default/AndroidManifest.xml:23:13-101
+		ADDED from [FTC_app_master_2017:FtcRobotController:unspecified] /Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/FtcRobotController/build/intermediates/bundles/default/AndroidManifest.xml:45:13-101
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from [FTC_app_master_2017:FtcRobotController:unspecified] /Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/FtcRobotController/build/intermediates/bundles/default/AndroidManifest.xml:27:13-31:29
+ADDED from [FTC_app_master_2017:FtcRobotController:unspecified] /Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/FtcRobotController/build/intermediates/bundles/default/AndroidManifest.xml:49:13-53:29
 category#android.intent.category.LAUNCHER
-ADDED from [FTC_app_master_2017:FtcRobotController:unspecified] /Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/FtcRobotController/build/intermediates/bundles/default/AndroidManifest.xml:28:17-77
+ADDED from [FTC_app_master_2017:FtcRobotController:unspecified] /Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/FtcRobotController/build/intermediates/bundles/default/AndroidManifest.xml:50:17-77
 	android:name
-		ADDED from [FTC_app_master_2017:FtcRobotController:unspecified] /Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/FtcRobotController/build/intermediates/bundles/default/AndroidManifest.xml:28:27-74
+		ADDED from [FTC_app_master_2017:FtcRobotController:unspecified] /Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/FtcRobotController/build/intermediates/bundles/default/AndroidManifest.xml:50:27-74
 action#android.intent.action.MAIN
-ADDED from [FTC_app_master_2017:FtcRobotController:unspecified] /Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/FtcRobotController/build/intermediates/bundles/default/AndroidManifest.xml:30:17-69
+ADDED from [FTC_app_master_2017:FtcRobotController:unspecified] /Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/FtcRobotController/build/intermediates/bundles/default/AndroidManifest.xml:52:17-69
 	android:name
-		ADDED from [FTC_app_master_2017:FtcRobotController:unspecified] /Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/FtcRobotController/build/intermediates/bundles/default/AndroidManifest.xml:30:25-66
+		ADDED from [FTC_app_master_2017:FtcRobotController:unspecified] /Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/FtcRobotController/build/intermediates/bundles/default/AndroidManifest.xml:52:25-66
 intent-filter#android.hardware.usb.action.USB_DEVICE_ATTACHED
-ADDED from [FTC_app_master_2017:FtcRobotController:unspecified] /Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/FtcRobotController/build/intermediates/bundles/default/AndroidManifest.xml:32:13-34:29
+ADDED from [FTC_app_master_2017:FtcRobotController:unspecified] /Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/FtcRobotController/build/intermediates/bundles/default/AndroidManifest.xml:54:13-56:29
 action#android.hardware.usb.action.USB_DEVICE_ATTACHED
-ADDED from [FTC_app_master_2017:FtcRobotController:unspecified] /Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/FtcRobotController/build/intermediates/bundles/default/AndroidManifest.xml:33:17-90
+ADDED from [FTC_app_master_2017:FtcRobotController:unspecified] /Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/FtcRobotController/build/intermediates/bundles/default/AndroidManifest.xml:55:17-90
 	android:name
-		ADDED from [FTC_app_master_2017:FtcRobotController:unspecified] /Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/FtcRobotController/build/intermediates/bundles/default/AndroidManifest.xml:33:25-87
+		ADDED from [FTC_app_master_2017:FtcRobotController:unspecified] /Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/FtcRobotController/build/intermediates/bundles/default/AndroidManifest.xml:55:25-87
 meta-data#android.hardware.usb.action.USB_DEVICE_ATTACHED
-ADDED from [FTC_app_master_2017:FtcRobotController:unspecified] /Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/FtcRobotController/build/intermediates/bundles/default/AndroidManifest.xml:36:13-38:57
+ADDED from [FTC_app_master_2017:FtcRobotController:unspecified] /Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/FtcRobotController/build/intermediates/bundles/default/AndroidManifest.xml:58:13-60:57
 	android:resource
-		ADDED from [FTC_app_master_2017:FtcRobotController:unspecified] /Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/FtcRobotController/build/intermediates/bundles/default/AndroidManifest.xml:38:17-54
+		ADDED from [FTC_app_master_2017:FtcRobotController:unspecified] /Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/FtcRobotController/build/intermediates/bundles/default/AndroidManifest.xml:60:17-54
 	android:name
-		ADDED from [FTC_app_master_2017:FtcRobotController:unspecified] /Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/FtcRobotController/build/intermediates/bundles/default/AndroidManifest.xml:37:17-79
+		ADDED from [FTC_app_master_2017:FtcRobotController:unspecified] /Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/FtcRobotController/build/intermediates/bundles/default/AndroidManifest.xml:59:17-79
 service#com.qualcomm.ftccommon.FtcRobotControllerService
-ADDED from [FTC_app_master_2017:FtcRobotController:unspecified] /Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/FtcRobotController/build/intermediates/bundles/default/AndroidManifest.xml:42:9-44:38
+ADDED from [FTC_app_master_2017:FtcRobotController:unspecified] /Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/FtcRobotController/build/intermediates/bundles/default/AndroidManifest.xml:64:9-66:38
 	android:enabled
-		ADDED from [FTC_app_master_2017:FtcRobotController:unspecified] /Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/FtcRobotController/build/intermediates/bundles/default/AndroidManifest.xml:44:13-35
+		ADDED from [FTC_app_master_2017:FtcRobotController:unspecified] /Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/FtcRobotController/build/intermediates/bundles/default/AndroidManifest.xml:66:13-35
 	android:name
-		ADDED from [FTC_app_master_2017:FtcRobotController:unspecified] /Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/FtcRobotController/build/intermediates/bundles/default/AndroidManifest.xml:43:13-76
+		ADDED from [FTC_app_master_2017:FtcRobotController:unspecified] /Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/FtcRobotController/build/intermediates/bundles/default/AndroidManifest.xml:65:13-76
 uses-permission#android.permission.ACCESS_WIFI_STATE
 ADDED from [:Inspection-release:] /Users/alexyuan/.android/build-cache/ea469d498d3993c9b3a064b7141ffad7906eacc1/output/AndroidManifest.xml:11:5-76
 MERGED from [:RobotCore-release:] /Users/alexyuan/.android/build-cache/372246ff2193a2a2b11da952ac5209b6a64f2767/output/AndroidManifest.xml:11:5-13:35
@@ -225,10 +268,6 @@ ADDED from [:RobotCore-release:] /Users/alexyuan/.android/build-cache/372246ff21
 		ADDED from [:RobotCore-release:] /Users/alexyuan/.android/build-cache/372246ff2193a2a2b11da952ac5209b6a64f2767/output/AndroidManifest.xml:47:9-32
 	android:name
 		ADDED from [:RobotCore-release:] /Users/alexyuan/.android/build-cache/372246ff2193a2a2b11da952ac5209b6a64f2767/output/AndroidManifest.xml:46:9-52
-uses-permission#android.permission.CAMERA
-ADDED from [:RobotCore-release:] /Users/alexyuan/.android/build-cache/372246ff2193a2a2b11da952ac5209b6a64f2767/output/AndroidManifest.xml:48:5-65
-	android:name
-		ADDED from [:RobotCore-release:] /Users/alexyuan/.android/build-cache/372246ff2193a2a2b11da952ac5209b6a64f2767/output/AndroidManifest.xml:48:22-62
 uses-feature#android.hardware.usb.accessory
 ADDED from [:RobotCore-release:] /Users/alexyuan/.android/build-cache/372246ff2193a2a2b11da952ac5209b6a64f2767/output/AndroidManifest.xml:50:5-67
 	android:name
@@ -237,10 +276,6 @@ uses-feature#0x00020000
 ADDED from [:RobotCore-release:] /Users/alexyuan/.android/build-cache/372246ff2193a2a2b11da952ac5209b6a64f2767/output/AndroidManifest.xml:51:5-54
 	android:glEsVersion
 		ADDED from [:RobotCore-release:] /Users/alexyuan/.android/build-cache/372246ff2193a2a2b11da952ac5209b6a64f2767/output/AndroidManifest.xml:51:19-51
-uses-feature#android.hardware.camera
-ADDED from [:RobotCore-release:] /Users/alexyuan/.android/build-cache/372246ff2193a2a2b11da952ac5209b6a64f2767/output/AndroidManifest.xml:65:5-60
-	android:name
-		ADDED from [:RobotCore-release:] /Users/alexyuan/.android/build-cache/372246ff2193a2a2b11da952ac5209b6a64f2767/output/AndroidManifest.xml:65:19-57
 service#org.firstinspires.ftc.robotcore.internal.files.MediaTransferProtocolMonitorService
 ADDED from [:RobotCore-release:] /Users/alexyuan/.android/build-cache/372246ff2193a2a2b11da952ac5209b6a64f2767/output/AndroidManifest.xml:70:9-72:38
 	android:enabled

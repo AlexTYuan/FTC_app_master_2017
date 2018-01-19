@@ -3,120 +3,129 @@
 
     <item
         is-multidex="false"
-        jar="/Users/alexyuan/.android/build-cache/d2522c47a515dfe183337ecf82eae99a10df2e8f/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.3"
-        sha1="7558c70f3b0b473ca494059b37f16ca880ac43fd">
-        <dex dex="/Users/alexyuan/Desktop/FTC/Programming/ftc_app-master_2017/TeamCode/build/intermediates/pre-dexed/debug/classes_9dbe4f290ddb4a48880c0e8a4a60cc3007d9e85c.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/alexyuan/.android/build-cache/faa0515e205fe00370ea3a00cc989b7a9c6289cc/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.3"
-        sha1="9dafed45e330aec14abcce05bdb7bbdb2a2d7092">
-        <dex dex="/Users/alexyuan/Desktop/FTC/Programming/ftc_app-master_2017/TeamCode/build/intermediates/pre-dexed/debug/classes_8cf5e5984f0767b60c510780a67d6e74213268f2.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/alexyuan/.android/build-cache/e0ae0e9ac7a14c9cb223f9d5ed85428d2a86a382/output/jars/libs/gson-2.8.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.3"
-        sha1="e118dd0900e4a18fb928ebb8df2d9fbda78f2b5d">
-        <dex dex="/Users/alexyuan/Desktop/FTC/Programming/ftc_app-master_2017/TeamCode/build/intermediates/pre-dexed/debug/gson-2.8.0_02aa9cfdc3712d8879eec88b073cf44d536907d4.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/alexyuan/.android/build-cache/6aca1a66c0449e9e8fe0c9105fb651bfbc274071/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.3"
-        sha1="e444b561b0feba789cac93c5db61f08ef8c25ee6">
-        <dex dex="/Users/alexyuan/Desktop/FTC/Programming/ftc_app-master_2017/TeamCode/build/intermediates/pre-dexed/debug/classes_882b24297aa2ad0bdd5b041d5c977b2c7d832df8.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/alexyuan/.android/build-cache/945b7b7757615a46e55b0ff78a188f8129c2b779/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.3"
-        sha1="1ce86a6340781abf3d876eba190efa34ae92d2f9">
-        <dex dex="/Users/alexyuan/Desktop/FTC/Programming/ftc_app-master_2017/TeamCode/build/intermediates/pre-dexed/debug/classes_258450d5f3c250b4580d187438e3b35ca655bdd5.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/alexyuan/.android/build-cache/e0ae0e9ac7a14c9cb223f9d5ed85428d2a86a382/output/jars/libs/Vuforia.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.3"
-        sha1="91b46366eb9f8203073ee2935087c097c888c0ed">
-        <dex dex="/Users/alexyuan/Desktop/FTC/Programming/ftc_app-master_2017/TeamCode/build/intermediates/pre-dexed/debug/Vuforia_09cea4995087f3a5c3246cd5301ac3103b151c60.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/alexyuan/.android/build-cache/e0ae0e9ac7a14c9cb223f9d5ed85428d2a86a382/output/jars/libs/support-annotations-23.4.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.3"
-        sha1="5a214d3b1b12e72f4fb0d5d5d8d0ec43c96de2b5">
-        <dex dex="/Users/alexyuan/Desktop/FTC/Programming/ftc_app-master_2017/TeamCode/build/intermediates/pre-dexed/debug/support-annotations-23.4.0_90807507a3c9796990b5351c22ff7c21d83018eb.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/alexyuan/.android/build-cache/005ad101c4c9f770b785594e27629784da1d46ce/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.3"
-        sha1="6c6d1584a392ebfee01efd98e6caaf6a9e5ac51d">
-        <dex dex="/Users/alexyuan/Desktop/FTC/Programming/ftc_app-master_2017/TeamCode/build/intermediates/pre-dexed/debug/classes_adfed7e545a3aaecaa00bf10d1a2515b92d984fe.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/alexyuan/.android/build-cache/e0ae0e9ac7a14c9cb223f9d5ed85428d2a86a382/output/jars/classes.jar"
+        jar="/Users/alexyuan/.android/build-cache/372246ff2193a2a2b11da952ac5209b6a64f2767/output/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.3"
         sha1="5d8f95b7b91c8a132c514f5dbe75340305e6883b">
-        <dex dex="/Users/alexyuan/Desktop/FTC/Programming/ftc_app-master_2017/TeamCode/build/intermediates/pre-dexed/debug/classes_df260704b6be59295f22394e58b369df5e640f2b.jar" />
+        <dex dex="/Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/TeamCode/build/intermediates/pre-dexed/debug/classes_e4328b932487103909c2b228593304c8cabeadbd.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/Users/alexyuan/Desktop/FTC/Programming/ftc_app-master_2017/FtcRobotController/build/intermediates/bundles/default/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.3"
-        sha1="d0c919e219a954111faa31c905d63e0e30c88b6b">
-        <dex dex="/Users/alexyuan/Desktop/FTC/Programming/ftc_app-master_2017/TeamCode/build/intermediates/pre-dexed/debug/classes_cfc3131ac9463a0f0c7f2e56d786327f09ba4e45.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/alexyuan/.android/build-cache/d9889a89ccbce249a9b25ab38c25ad603410e294/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.3"
-        sha1="9403be210676ed196cdcc64c7391b9ae2361c174">
-        <dex dex="/Users/alexyuan/Desktop/FTC/Programming/ftc_app-master_2017/TeamCode/build/intermediates/pre-dexed/debug/classes_8ba6ac5a46187bdd74dacbf07a20fb4f1ae9f487.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/alexyuan/.android/build-cache/e0ae0e9ac7a14c9cb223f9d5ed85428d2a86a382/output/jars/libs/gson-extras-0.2.1.jar"
+        jar="/Users/alexyuan/.android/build-cache/372246ff2193a2a2b11da952ac5209b6a64f2767/output/jars/libs/gson-extras-0.2.1.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.3"
         sha1="b30c2655badcc7ce97f84e49f777b7dd154bad57">
-        <dex dex="/Users/alexyuan/Desktop/FTC/Programming/ftc_app-master_2017/TeamCode/build/intermediates/pre-dexed/debug/gson-extras-0.2.1_770ac18dfde83f7ee07a4fbdd2968ecf7e13bad6.jar" />
+        <dex dex="/Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/TeamCode/build/intermediates/pre-dexed/debug/gson-extras-0.2.1_d57eebffcbef63e926577c3976256c284a96eb23.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/Users/alexyuan/.android/build-cache/e0ae0e9ac7a14c9cb223f9d5ed85428d2a86a382/output/jars/libs/javac.jar"
+        jar="/Users/alexyuan/.android/build-cache/372246ff2193a2a2b11da952ac5209b6a64f2767/output/jars/libs/support-annotations-23.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="5a214d3b1b12e72f4fb0d5d5d8d0ec43c96de2b5">
+        <dex dex="/Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/TeamCode/build/intermediates/pre-dexed/debug/support-annotations-23.4.0_6b3acb9d39dea22fc36724259a5b8c1381de8a3b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/FtcRobotController/build/intermediates/bundles/default/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="39fd78974e344dfd37ef2fe00c09b5c1f8a6f30c">
+        <dex dex="/Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/TeamCode/build/intermediates/pre-dexed/debug/classes_99efe995afe5db4b9150e64a0e2cc092c442b2cd.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/alexyuan/.android/build-cache/00ce7909adaa2ea5fbc6e727ee831f0fbc0b6e5f/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="7558c70f3b0b473ca494059b37f16ca880ac43fd">
+        <dex dex="/Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/TeamCode/build/intermediates/pre-dexed/debug/classes_34a90f400ff50d2dd16fc691fe5f6402bd72f441.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/alexyuan/.android/build-cache/ea469d498d3993c9b3a064b7141ffad7906eacc1/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="e444b561b0feba789cac93c5db61f08ef8c25ee6">
+        <dex dex="/Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/TeamCode/build/intermediates/pre-dexed/debug/classes_449a5358e1543ec8ae70b2280e15bee5a158084e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/alexyuan/.android/build-cache/9332172c6a67bb1597d41bf0214be47f93aa6626/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="6c6d1584a392ebfee01efd98e6caaf6a9e5ac51d">
+        <dex dex="/Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/TeamCode/build/intermediates/pre-dexed/debug/classes_e82bf1c27528bd5bc551be5d7a99d47fef2ccc07.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/openCVLibrary331/build/intermediates/bundles/default/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="a75ae7d3c105c75fc5083c46f946b258c6b2f7c7">
+        <dex dex="/Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/TeamCode/build/intermediates/pre-dexed/debug/classes_0f05d2b9f1ca345fefc3bbf82cf2df78f75136d8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/alexyuan/.android/build-cache/372246ff2193a2a2b11da952ac5209b6a64f2767/output/jars/libs/javac.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.3"
         sha1="c576121aac49e547b39aedfb1daa29782db4166c">
-        <dex dex="/Users/alexyuan/Desktop/FTC/Programming/ftc_app-master_2017/TeamCode/build/intermediates/pre-dexed/debug/javac_0403aa92d11ee6197136fdaac66ad56af8796951.jar" />
+        <dex dex="/Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/TeamCode/build/intermediates/pre-dexed/debug/javac_ed728f6a63370ed78dea44e53e46ef6b0c373f8a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/alexyuan/.android/build-cache/2ed08df1a5700543479e17d6798a0336acbf51be/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="1ce86a6340781abf3d876eba190efa34ae92d2f9">
+        <dex dex="/Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/TeamCode/build/intermediates/pre-dexed/debug/classes_0fe1c42c611dabfa095a445a1b4da814f5601579.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/alexyuan/.android/build-cache/372246ff2193a2a2b11da952ac5209b6a64f2767/output/jars/libs/Vuforia.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="91b46366eb9f8203073ee2935087c097c888c0ed">
+        <dex dex="/Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/TeamCode/build/intermediates/pre-dexed/debug/Vuforia_fd2eb28160e11a311cca6ee93576956cea1b8828.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/alexyuan/.android/build-cache/3fbfdb673dc0dc16c56208acd76caa06dbf520fb/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="9403be210676ed196cdcc64c7391b9ae2361c174">
+        <dex dex="/Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/TeamCode/build/intermediates/pre-dexed/debug/classes_a0f287228e9ab49c32e9a64e68bd8edb429ac418.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/alexyuan/.android/build-cache/372246ff2193a2a2b11da952ac5209b6a64f2767/output/jars/libs/gson-2.8.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="e118dd0900e4a18fb928ebb8df2d9fbda78f2b5d">
+        <dex dex="/Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/TeamCode/build/intermediates/pre-dexed/debug/gson-2.8.0_f7b4086abdb0c6f4c9d64491e4256ef06c82ad4b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/alexyuan/.android/build-cache/87553c006931ccc13c4538855a6b4b53e055c458/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="9dafed45e330aec14abcce05bdb7bbdb2a2d7092">
+        <dex dex="/Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/TeamCode/build/intermediates/pre-dexed/debug/classes_e9f8df7f9e879f2e7aeff59eef4b33a77b5ac639.jar" />
     </item>
 
 </items>
