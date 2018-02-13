@@ -31,6 +31,9 @@ package org.firstinspires.ftc.teamcode;
 
 import com.qualcomm.hardware.bosch.BNO055IMU;
 import com.qualcomm.hardware.bosch.JustLoggingAccelerationIntegrator;
+import com.qualcomm.hardware.modernrobotics.ModernRoboticsI2cColorSensor;
+import com.qualcomm.robotcore.hardware.CRServo;
+import com.qualcomm.robotcore.hardware.ColorSensor;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.DcMotorSimple;
 import com.qualcomm.robotcore.hardware.HardwareMap;
@@ -62,8 +65,14 @@ public class Hardware_2017
     public DcMotor BR           = null;
     public DcMotor Turntable    = null;
     public DcMotor Arm          = null;
+    public DcMotor Lift         = null;
 
-    public BNO055IMU imu        = null;
+    public CRServo Joint        = null;
+    public Servo   Right        = null;
+    public Servo   Left         = null;
+    public Servo   Block        = null;
+
+    public BNO055IMU IMU        = null;
 
     /* local OpMode members. */
     HardwareMap hwMap           = null;
@@ -79,6 +88,7 @@ public class Hardware_2017
         // Save reference to Hardware map
         hwMap = ahwMap;
 
+        //Inertial Measurement Unit Setup
         BNO055IMU.Parameters parameters = new BNO055IMU.Parameters();
         parameters.angleUnit           = BNO055IMU.AngleUnit.DEGREES;
         parameters.accelUnit           = BNO055IMU.AccelUnit.METERS_PERSEC_PERSEC;
@@ -87,42 +97,65 @@ public class Hardware_2017
         parameters.loggingTag          = "IMU";
         parameters.accelerationIntegrationAlgorithm = new JustLoggingAccelerationIntegrator();
 
-        FL = hwMap.get(DcMotor.class, "fl");
-        FR = hwMap.get(DcMotor.class, "fr");
-        BL = hwMap.get(DcMotor.class, "bl");
-        BR = hwMap.get(DcMotor.class, "br");
-        Turntable = hwMap.get(DcMotor.class, "turn");
-        Arm = hwMap.get(DcMotor.class, "arm");
-        imu = hwMap.get(BNO055IMU.class, "imu");
 
-        imu.initialize(parameters);
+        //Get Motor/Servo location from hardware map
+        FL          = hwMap.get(DcMotor.class, "fl");
+        FR          = hwMap.get(DcMotor.class, "fr");
+        BL          = hwMap.get(DcMotor.class, "bl");
+        BR          = hwMap.get(DcMotor.class, "br");
+        Turntable   = hwMap.get(DcMotor.class, "turn");
+        Arm         = hwMap.get(DcMotor.class, "arm");
+        Lift        = hwMap.get(DcMotor.class, "lift");
+        IMU         = hwMap.get(BNO055IMU.class, "imu");
+        Joint       = hwMap.get(CRServo.class, "joint");
+        Right       = hwMap.get(Servo.class, "right");
+        Left        = hwMap.get(Servo.class, "left");
+        Block       = hwMap.get(Servo.class, "block");
 
+        IMU.initialize(parameters);
+
+        //Motor Direction Setup
         FL.setDirection(DcMotor.Direction.REVERSE);
         FR.setDirection(DcMotor.Direction.FORWARD);
         BL.setDirection(DcMotor.Direction.REVERSE);
         BR.setDirection(DcMotor.Direction.FORWARD);
         Turntable.setDirection(DcMotor.Direction.FORWARD);
-        Arm.setDirection(DcMotorSimple.Direction.FORWARD);
+        Arm.setDirection(DcMotor.Direction.FORWARD);
+        Lift.setDirection(DcMotor.Direction.FORWARD);
 
+        //Set all motor/CRServo power to zero
         FL.setPower(0);
         FR.setPower(0);
         BL.setPower(0);
         BR.setPower(0);
         Turntable.setPower(0);
+        Joint.setPower(0);
+        Lift.setPower(0);
 
+        //Set initial position for servos
+        Right.setPosition(0);
+        Left.setPosition(0);
+        Block.setPosition(1);
+
+        //Set run mode for all motors
         FL.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
         FR.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
         BL.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
         BR.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
         Turntable.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
         Arm.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
+        Lift.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
 
+        //Set up zero power behavior
+        //Brake -- Stops motors when power set to zero
+        //Float -- Allows motors to glide when power set to zero
         FL.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
         FR.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
         BL.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
         BR.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
         Turntable.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
         Arm.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
+        Lift.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.FLOAT);
     }
  }
 

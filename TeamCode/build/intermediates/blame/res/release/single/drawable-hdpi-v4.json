@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/TeamCode/build/intermediates/res/merged/release/drawable-hdpi-v4/button_shape.xml",
+        "source": "/Users/alexyuan/.android/build-cache/00ce7909adaa2ea5fbc6e727ee831f0fbc0b6e5f/output/res/drawable-hdpi-v4/button_shape.xml"
+    },
+    {
+        "merged": "/Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/TeamCode/build/intermediates/res/merged/release/drawable-hdpi-v4/ic_launcher.png",
+        "source": "/Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/FtcRobotController/build/intermediates/bundles/default/res/drawable-hdpi-v4/ic_launcher.png"
+    }
+]

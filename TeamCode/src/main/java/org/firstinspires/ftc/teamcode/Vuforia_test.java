@@ -400,35 +400,35 @@ public class Vuforia_test extends LinearOpMode {
             }
         }
     }
-//    public Image getImage(){
-//        VuforiaLocalizer.CloseableFrame frame = null;
-//        try{
-//            frame = vuforia.getFrameQueue().take();
-//            long numImages = frame.getNumImages();
-//            Image rgbImage = null;
-//            for (int i = 0; i < numImages; i++) {
-//                Image img = frame.getImage(i);
-//                int fmt = img.getFormat();
-//                if (fmt == PIXEL_FORMAT.RGB565) {
-//                    rgbImage = frame.getImage(i);
-//                    frame.close();
-//                    break;
-//                }
-//            }
-//            return rgbImage;
-//        }
-//        catch(InterruptedException exc){
-//            return null;
-//        }
-//        finally{
-//            if (frame != null) frame.close();
-//        }
-//
-//    }
+    public Image getImage(){
+        VuforiaLocalizer.CloseableFrame frame = null;
+        try{
+            frame = vuforia.getFrameQueue().take();
+            long numImages = frame.getNumImages();
+            Image rgbImage = null;
+            for (int i = 0; i < numImages; i++) {
+                Image img = frame.getImage(i);
+                int fmt = img.getFormat();
+                if (fmt == PIXEL_FORMAT.RGB565) {
+                    rgbImage = frame.getImage(i);
+                    frame.close();
+                    break;
+                }
+            }
+            return rgbImage;
+        }
+        catch(InterruptedException exc){
+            return null;
+        }
+        finally{
+            if (frame != null) frame.close();
+        }
 
-    //----------------------------------------------------------------------------------------------
-    // Formatting
-    //----------------------------------------------------------------------------------------------
+    }
+
+//    ----------------------------------------------------------------------------------------------
+//     Formatting
+//    ----------------------------------------------------------------------------------------------
 
     void composeTelemetry() {
 
@@ -439,20 +439,20 @@ public class Vuforia_test extends LinearOpMode {
             // Acquiring the angles is relatively expensive; we don't want
             // to do that in each of the three items that need that info, as that's
             // three times the necessary expense.
-            angles   = robot.imu.getAngularOrientation(AxesReference.INTRINSIC, AxesOrder.ZYX, AngleUnit.DEGREES);
-            gravity  = robot.imu.getGravity();
+            angles   = robot.IMU.getAngularOrientation(AxesReference.INTRINSIC, AxesOrder.ZYX, AngleUnit.DEGREES);
+            gravity  = robot.IMU.getGravity();
         }
         });
 
         telemetry.addLine()
                 .addData("status", new Func<String>() {
                     @Override public String value() {
-                        return robot.imu.getSystemStatus().toShortString();
+                        return robot.IMU.getSystemStatus().toShortString();
                     }
                 })
                 .addData("calib", new Func<String>() {
                     @Override public String value() {
-                        return robot.imu.getCalibrationStatus().toString();
+                        return robot.IMU.getCalibrationStatus().toString();
                     }
                 });
 

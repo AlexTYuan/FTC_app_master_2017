@@ -55,6 +55,21 @@ public class Teleop_2017 extends OpMode{
     /* Declare OpMode members. */
     Hardware_2017 robot       = new Hardware_2017(); // use the class created to define a Pushbot's hardware
 
+    double leftsticky;
+    double leftstickx;
+    double RT;
+    double LT;
+    double turn;
+    double left;
+    double right;
+    double multiplier;
+    boolean clicked = false;
+    int state = 1;
+
+    double          clawOffset  = 0.0 ;                  // Servo mid position
+    final double    CLAW_SPEED  = 0.02 ;                 // sets rate to move servo
+    double clawoffset2 = 0;
+
     /*
      * Code to run ONCE when the driver hits INIT
      */
@@ -81,6 +96,7 @@ public class Teleop_2017 extends OpMode{
      */
     @Override
     public void start() {
+
     }
 
     /*
@@ -88,30 +104,32 @@ public class Teleop_2017 extends OpMode{
      */
     @Override
     public void loop() {
-        double leftsticky;
-        double leftstickx;
-        double turn;
-        double left;
-        double right;
-        double multiplier;
 
-        // Run wheels in tank mode (note: The joystick goes negative when pushed forwards, so negate it)
+        //Get controller input
         leftsticky = -gamepad1.left_stick_y;
         leftstickx = gamepad1.left_stick_x;
-        turn = gamepad1.right_stick_x;
+        turn = -gamepad1.right_stick_x;
+        RT = gamepad1.right_trigger;
+        LT = gamepad1.left_trigger;
 
+        //Mutate linear input into a cubic curve
         leftstickx = Math.pow(leftstickx, 3);
         leftsticky = Math.pow(leftsticky, 3);
+        RT         = Math.pow(RT, 3);
+        LT         = Math.pow(LT, 3);
 
-        //set motor powers to be in interavls of 0.2
+        //Set motor powers to be in interavls of 0.2
         ranged(leftstickx);
         ranged(leftsticky);
 
-        //set value for turning while moving
-        if (turn > 0) {
+        //drive robot
+        drive();
+
+        //Set value for turning while moving
+        if (turn > 0.2) {
             right = 1;
             left = -turn;
-        } else if (turn < 0) {
+        } else if (turn < -0.2) {
             right = turn;
             left = 1;
         } else {
@@ -119,25 +137,90 @@ public class Teleop_2017 extends OpMode{
             left = 1;
         }
 
-        //check if robot is not moving
+        //Check if robot is not moving
         if (leftstickx == 0 && leftsticky == 0) {
             multiplier = 1;
         } else {
             multiplier = 0;
         }
 
-        //set the power of each motor to be the
-        // (x direction + y direction) * turn rate + turn rate for robot not moving
+
+
+        //Use gamepad left & right Bumpers to open and close the claw
+        if (gamepad1.right_bumper)
+            clawOffset += CLAW_SPEED;
+        else if (gamepad1.left_bumper)
+            clawOffset -= CLAW_SPEED;
+
+        //Move both servos to new position.  Assume servos are mirror image of each other.
+        clawOffset = Range.clip(clawOffset, 0, 1);
+        robot.Right.setPosition(clawOffset);
+        robot.Left.setPosition(clawOffset);
+
+        //Change trigger setting, 1 as default
+        //1 -- move lower arm
+        //2 -- move upper arm
+        //Check trigger setting then set motor power
+        if (gamepad1.a && !clicked) {
+            clicked = true;
+        } else if (!gamepad1.a && clicked) {
+            clicked = false;
+            if (state == 1) {
+                state = 2;
+            } else {
+                state = 1;
+            }
+        }
+
+        if (state == 1) {
+            robot.Arm.setPower(RT - LT);
+        } else {
+            robot.Lift.setPower((RT - LT)/2);
+        }
+
+        if (gamepad1.dpad_right) {
+            clawoffset2 += CLAW_SPEED;
+        } else if (gamepad1.dpad_left) {
+            clawoffset2 -= CLAW_SPEED;
+        }
+
+        clawOffset = Range.clip(clawoffset2, 0, 1);
+        robot.Block.setPosition(clawoffset2);
+
+        //Move servo holding claw
+        if (gamepad1.dpad_up) {
+            robot.Joint.setPower(0.6);
+        } else if (gamepad1.dpad_down) {
+            robot.Joint.setPower(-0.6);
+        } else {
+            robot.Joint.setPower(0);
+        }
+
+        if (gamepad1.dpad_left) {
+            robot.Turntable.setPower(1);
+        } else if (gamepad1.dpad_right) {
+            robot.Turntable.setPower(-1);
+        } else {
+            robot.Turntable.setPower(0);
+        }
+
+        telemetry.update();
+
+    }
+
+    //Set the power of each motor to be the
+    //(x direction + y direction) * turn rate + turn rate for robot not moving
         /*
         *  FL ________ FR
         *    /        \
         *   /          \
         *
-        *  BL          BR
+        *
         *   \          /
         *    \________/
-        *
+        *  BL           BR
         * */
+    public void drive() {
         if (leftstickx < leftsticky && Math.abs(leftstickx) < leftsticky) {
             //Robot moving forward: Direction of arm
             robot.FL.setPower((leftstickx + leftsticky) * left + (turn * multiplier));
@@ -169,26 +252,6 @@ public class Teleop_2017 extends OpMode{
             robot.BL.setPower(-turn);
             robot.BR.setPower(turn);
         }
-
-
-        if (gamepad1.right_bumper) {
-            robot.Turntable.setPower(0.3);
-        } else if (gamepad1.left_bumper) {
-            robot.Turntable.setPower(-0.3);
-        } else {
-            robot.Turntable.setPower(0);
-        }
-
-
-        double RT = gamepad1.right_trigger;
-        double LT = gamepad1.left_trigger;
-
-        RT = Math.pow(RT, 3);
-        LT = Math.pow(LT, 3);
-
-        robot.Arm.setPower(RT - LT);
-
-
     }
 
 

@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "/Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/TeamCode/build/intermediates/res/merged/release/drawable/icon_menu.png",
+        "source": "/Users/alexyuan/.android/build-cache/ea469d498d3993c9b3a064b7141ffad7906eacc1/output/res/drawable/icon_menu.png"
+    },
+    {
+        "merged": "/Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/TeamCode/build/intermediates/res/merged/release/drawable/black_border.xml",
+        "source": "/Users/alexyuan/.android/build-cache/2ed08df1a5700543479e17d6798a0336acbf51be/output/res/drawable/black_border.xml"
+    },
+    {
+        "merged": "/Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/TeamCode/build/intermediates/res/merged/release/drawable/icon_robotcontroller.png",
+        "source": "/Users/alexyuan/.android/build-cache/ea469d498d3993c9b3a064b7141ffad7906eacc1/output/res/drawable/icon_robotcontroller.png"
+    },
+    {
+        "merged": "/Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/TeamCode/build/intermediates/res/merged/release/drawable/button_shape.xml",
+        "source": "/Users/alexyuan/.android/build-cache/00ce7909adaa2ea5fbc6e727ee831f0fbc0b6e5f/output/res/drawable/button_shape.xml"
+    },
+    {
+        "merged": "/Users/alexyuan/Desktop/FTC/Programming/FTC_app_master_2017/TeamCode/build/intermediates/res/merged/release/drawable/feedback_shape_orange.xml",
+        "source": "/Users/alexyuan/.android/build-cache/372246ff2193a2a2b11da952ac5209b6a64f2767/output/res/drawable/feedback_shape_orange.xml"
+    }
+]
