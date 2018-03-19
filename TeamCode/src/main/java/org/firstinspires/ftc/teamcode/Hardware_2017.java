@@ -67,10 +67,8 @@ public class Hardware_2017
     public DcMotor Arm          = null;
     public DcMotor Lift         = null;
 
-    public CRServo Joint        = null;
     public Servo   Right        = null;
     public Servo   Left         = null;
-    public Servo   Block        = null;
 
     public BNO055IMU IMU        = null;
 
@@ -107,10 +105,8 @@ public class Hardware_2017
         Arm         = hwMap.get(DcMotor.class, "arm");
         Lift        = hwMap.get(DcMotor.class, "lift");
         IMU         = hwMap.get(BNO055IMU.class, "imu");
-        Joint       = hwMap.get(CRServo.class, "joint");
         Right       = hwMap.get(Servo.class, "right");
         Left        = hwMap.get(Servo.class, "left");
-        Block       = hwMap.get(Servo.class, "block");
 
         IMU.initialize(parameters);
 
@@ -129,13 +125,12 @@ public class Hardware_2017
         BL.setPower(0);
         BR.setPower(0);
         Turntable.setPower(0);
-        Joint.setPower(0);
         Lift.setPower(0);
 
+
         //Set initial position for servos
-        Right.setPosition(0);
-        Left.setPosition(0);
-        Block.setPosition(1);
+        Right.setPosition(0.5);
+        Left.setPosition(0.5);
 
         //Set run mode for all motors
         FL.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);

@@ -57,18 +57,21 @@ public class Teleop_2017 extends OpMode{
 
     double leftsticky;
     double leftstickx;
+    double armsticky;
+    double liftstick;
     double RT;
     double LT;
     double turn;
     double left;
     double right;
     double multiplier;
+    double temp;
     boolean clicked = false;
     int state = 1;
 
-    double          clawOffset  = 0.0 ;                  // Servo mid position
-    final double    CLAW_SPEED  = 0.02 ;                 // sets rate to move servo
-    double clawoffset2 = 0;
+    double          clawOffset  = 0.5 ;
+    final double    CLAW_SPEED  = 0.005 ;  // sets rate to move servo
+    double          clawOffset2 = 0.665;
 
     /*
      * Code to run ONCE when the driver hits INIT
@@ -111,12 +114,16 @@ public class Teleop_2017 extends OpMode{
         turn = -gamepad1.right_stick_x;
         RT = gamepad1.right_trigger;
         LT = gamepad1.left_trigger;
+        armsticky = -gamepad2.left_stick_y;
+        liftstick = -gamepad2.right_stick_y;
 
         //Mutate linear input into a cubic curve
         leftstickx = Math.pow(leftstickx, 3);
         leftsticky = Math.pow(leftsticky, 3);
         RT         = Math.pow(RT, 3);
         LT         = Math.pow(LT, 3);
+        armsticky  = Math.pow(armsticky, 5);
+        liftstick  = Math.pow(liftstick, 5);
 
         //Set motor powers to be in interavls of 0.2
         ranged(leftstickx);
@@ -124,6 +131,8 @@ public class Teleop_2017 extends OpMode{
 
         //drive robot
         drive();
+
+
 
         //Set value for turning while moving
         if (turn > 0.2) {
@@ -147,63 +156,51 @@ public class Teleop_2017 extends OpMode{
 
 
         //Use gamepad left & right Bumpers to open and close the claw
-        if (gamepad1.right_bumper)
-            clawOffset += CLAW_SPEED;
-        else if (gamepad1.left_bumper)
+        if (gamepad1.right_bumper || gamepad2.right_bumper)
             clawOffset -= CLAW_SPEED;
+        else if (gamepad1.left_bumper || gamepad2.left_bumper)
+            clawOffset += CLAW_SPEED;
 
         //Move both servos to new position.  Assume servos are mirror image of each other.
         clawOffset = Range.clip(clawOffset, 0, 1);
-        robot.Right.setPosition(clawOffset);
+        robot.Right.setPosition(1 - clawOffset);
         robot.Left.setPosition(clawOffset);
 
+        //for one driver
         //Change trigger setting, 1 as default
         //1 -- move lower arm
         //2 -- move upper arm
         //Check trigger setting then set motor power
-        if (gamepad1.a && !clicked) {
-            clicked = true;
-        } else if (!gamepad1.a && clicked) {
-            clicked = false;
-            if (state == 1) {
-                state = 2;
-            } else {
-                state = 1;
-            }
-        }
+//        if ((gamepad1.a || gamepad2.a) && !clicked) {
+//            clicked = true;
+//        } else if ((!gamepad1.a || !gamepad2.a) && clicked) {
+//            clicked = false;
+//            if (state == 1) {
+//                state = 2;
+//            } else {
+//                state = 1;
+//            }
+//        }
+//
+//        if (state == 1) {
+//            robot.Arm.setPower(RT - LT);
+//        } else {
+//            robot.Lift.setPower((RT - LT)/2);
+//        }
 
-        if (state == 1) {
-            robot.Arm.setPower(RT - LT);
-        } else {
-            robot.Lift.setPower((RT - LT)/2);
-        }
+        robot.Arm.setPower(armsticky);
+        robot.Lift.setPower(liftstick);
 
-        if (gamepad1.dpad_right) {
-            clawoffset2 += CLAW_SPEED;
-        } else if (gamepad1.dpad_left) {
-            clawoffset2 -= CLAW_SPEED;
-        }
-
-        clawOffset = Range.clip(clawoffset2, 0, 1);
-        robot.Block.setPosition(clawoffset2);
-
-        //Move servo holding claw
-        if (gamepad1.dpad_up) {
-            robot.Joint.setPower(0.6);
-        } else if (gamepad1.dpad_down) {
-            robot.Joint.setPower(-0.6);
-        } else {
-            robot.Joint.setPower(0);
-        }
-
-        if (gamepad1.dpad_left) {
+        if (gamepad1.dpad_left || gamepad2.dpad_left) {
             robot.Turntable.setPower(1);
-        } else if (gamepad1.dpad_right) {
+        } else if (gamepad1.dpad_left || gamepad2.dpad_left) {
             robot.Turntable.setPower(-1);
         } else {
             robot.Turntable.setPower(0);
         }
 
+        telemetry.addData("right pos", robot.Right.getPosition());
+        telemetry.addData("left pos", robot.Left.getPosition());
         telemetry.update();
 
     }

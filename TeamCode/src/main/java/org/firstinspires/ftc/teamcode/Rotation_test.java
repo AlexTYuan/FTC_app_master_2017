@@ -112,33 +112,33 @@ public class Rotation_test extends OpMode{
         }
     }
 
-    public void setMotorPower(double power, Vuforia_test.Direction direction) {
-        if (direction == Vuforia_test.Direction.FORWARD) {
+    public void setMotorPower(double power, Autonomous_Blue.Direction direction) {
+        if (direction == Autonomous_Blue.Direction.FORWARD) {
             robot.FL.setPower(power);
             robot.FR.setPower(power);
             robot.BL.setPower(power);
             robot.BR.setPower(power);
-        } else if (direction == Vuforia_test.Direction.BACKWARD) {
+        } else if (direction == Autonomous_Blue.Direction.BACKWARD) {
             robot.FL.setPower(-power);
             robot.FR.setPower(-power);
             robot.BL.setPower(-power);
             robot.BR.setPower(-power);
-        } else if (direction == Vuforia_test.Direction.LEFT) {
+        } else if (direction == Autonomous_Blue.Direction.LEFT) {
             robot.FL.setPower(-power);
             robot.FR.setPower(power);
             robot.BL.setPower(power);
             robot.BR.setPower(-power);
-        } else if (direction == Vuforia_test.Direction.RIGHT) {
+        } else if (direction == Autonomous_Blue.Direction.RIGHT) {
             robot.FL.setPower(power);
             robot.FR.setPower(-power);
             robot.BL.setPower(-power);
             robot.BR.setPower(power);
-        } else if (direction == Vuforia_test.Direction.CLOCKWISE) {
+        } else if (direction == Autonomous_Blue.Direction.CLOCKWISE) {
             robot.FL.setPower(power);
             robot.FR.setPower(-power);
             robot.BL.setPower(power);
             robot.BR.setPower(-power);
-        } else if (direction == Vuforia_test.Direction.ANTICLOCKWISE) {
+        } else if (direction == Autonomous_Blue.Direction.ANTICLOCKWISE) {
             robot.FL.setPower(-power);
             robot.FR.setPower(power);
             robot.BL.setPower(-power);
@@ -153,12 +153,12 @@ public class Rotation_test extends OpMode{
      */
     public void turn(double degrees, double power) {
         if (degrees > 0) {
-            setMotorPower(power, Vuforia_test.Direction.ANTICLOCKWISE);
+            setMotorPower(power, Autonomous_Blue.Direction.ANTICLOCKWISE);
             while (angles.firstAngle > startingangle + degrees) {
                 //
             }
         } else {
-            setMotorPower(power, Vuforia_test.Direction.CLOCKWISE);
+            setMotorPower(power, Autonomous_Blue.Direction.CLOCKWISE);
             while (angles.firstAngle < startingangle + degrees) {
                 //
             }

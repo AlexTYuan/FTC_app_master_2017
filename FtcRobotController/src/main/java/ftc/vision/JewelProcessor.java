@@ -43,8 +43,8 @@ public class JewelProcessor implements ImageProcessor<JewelColorResult> {
         List<Scalar> hsvMax = new ArrayList<>();
 
         //hsvMin.add(new Scalar(  H,   S,   V  ));
-        hsvMin.add(new Scalar(300/2,  50, 150)); //red min
-        hsvMax.add(new Scalar( 60/2, 255, 255)); //red max
+        hsvMin.add(new Scalar(300,  100, 40)); //red min
+        hsvMax.add(new Scalar( 360, 100, 70)); //red max
 
         hsvMin.add(new Scalar(180/2,  50, 150)); //blue min
         hsvMax.add(new Scalar(300/2, 255, 255)); //blue max

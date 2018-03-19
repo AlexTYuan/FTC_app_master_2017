@@ -44,8 +44,8 @@ public class BeaconProcessor implements ImageProcessor<BeaconColorResult> {
         List<Scalar> hsvMax = new ArrayList<>();
 
         //hsvMin.add(new Scalar(  H,   S,   V  ));
-        hsvMin.add(new Scalar(300/2,  50, 150)); //red min
-        hsvMax.add(new Scalar( 60/2, 255, 255)); //red max
+        hsvMin.add(new Scalar(159,  100, 100)); //red min
+        hsvMax.add(new Scalar(15, 255, 255)); //red max
 
         hsvMin.add(new Scalar( 60/2,  50, 150)); //green min
         hsvMax.add(new Scalar(180/2, 255, 255)); //green max
